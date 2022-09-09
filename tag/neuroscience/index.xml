@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neuroscience | Amir Mesbah</title>
+    <link>https://amirhosein-mesbah.github.io/tag/neuroscience/</link>
+      <atom:link href="https://amirhosein-mesbah.github.io/tag/neuroscience/index.xml" rel="self" type="application/rss+xml" />
+    <description>Neuroscience</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://amirhosein-mesbah.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Neuroscience</title>
+      <link>https://amirhosein-mesbah.github.io/tag/neuroscience/</link>
+    </image>
+    
+    <item>
+      <title>Analysing Continuous‑Time Neural Signals for different data modalities</title>
+      <link>https://amirhosein-mesbah.github.io/project/continuous_time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/continuous_time/</guid>
+      <description>&lt;h2 id=&#34;electroencephalogram&#34;&gt;Electroencephalogram&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;EEgLab toolbox in Matlab
+I&amp;rsquo;ve used EEgLab toolBox in Matlab for preprocessing EEG data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resampling&lt;/li&gt;
+&lt;li&gt;Re‑referencing&lt;/li&gt;
+&lt;li&gt;baseline normalization&lt;/li&gt;
+&lt;li&gt;creating epochs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Representational Dissimilarity Matrices (RDM) Analysis
+checking for the dissimilarity of brain state in the IT cortex for three different stimulus. RSA diagram is shown below&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-rsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;RSA&#34; srcset=&#34;
+               /project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_ac32edbceb959011dc3e7d096dd9c573.webp 400w,
+               /project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_12cadc8eb148bd2afe064dceed4b3d50.webp 760w,
+               /project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_ac32edbceb959011dc3e7d096dd9c573.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;310&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      RSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;As shown in the Figure above, at the time of 200 milliseconds, the graphs of all 3 stimuli overlap and these 3 stimuli cannot be distinguished from each other. So 200 milliseconds is not a good time to distinguish between 3 stimuli. According to the course materials and the class, cognition occurs in the IT cortex between 00 and 600 milliseconds. Therefore, according to the graph of this interval, it can be a good interval for distinguishing between 3 stimuli. Also, considering that the input image does not reach the IT cortex until 150 milliseconds, it can be seen in the diagram that from the beginning of time until about 150 milliseconds, the diagrams of the 3 stimuli overlap to a large extent.&lt;/p&gt;
+&lt;h2 id=&#34;local-field-potentials&#34;&gt;Local Field Potentials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Phase Lock Analysis
+In this part, we investigate phase locking between two areas of &lt;code&gt;v4&lt;/code&gt; and &lt;code&gt;EFE&lt;/code&gt; in the IT Cortex.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-plv&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;PLV&#34; srcset=&#34;
+               /project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_a0ae577098350415ac3c0290074fd665.webp 400w,
+               /project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_334e64c18a8652872e28380a3d53607f.webp 760w,
+               /project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_a0ae577098350415ac3c0290074fd665.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;620&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      PLV
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;In the delta, theta, and alpha ranges, we have phase lock in approximately 2300 milliseconds, 1650 milliseconds, and 1300 milliseconds respectively. According to Figure 13, which shows the memory-guided saccade task, these phase-locks can be related to the cue phase. That is, when showing the stimulus to the subject, the v4 and efe regions are phase-locked together.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grager Casualty
+&lt;ul&gt;
+&lt;li&gt;Checking for connectivity between &lt;code&gt;v4&lt;/code&gt; and &lt;code&gt;ECE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fmri&#34;&gt;fMRI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Seed‑based Correlation Analysis on fMRI data modality to find significant voxels&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analysing Discrete‑Time Neural Signals</title>
+      <link>https://amirhosein-mesbah.github.io/project/discrete_time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/discrete_time/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve worked on Signle Cell data. Spike Sorting, Unit-based Decoding and Population-based decoding are the three tasks that have been done in this project.&lt;/p&gt;
+&lt;h2 id=&#34;spike-sorting&#34;&gt;Spike Sorting&lt;/h2&gt;
+&lt;p&gt;After Applying butterworth highpass filter on raw data, we need to calculate threshold for detecting peaks and after extracting peaks and applying PCA for Dimensionality Reduction we use K-Means algorithm for clustering.&lt;/p&gt;
+&lt;p&gt;Below there is a PairPlot for K-means Algorithm for 9 proposed clusters&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pairplot&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;pairplot&#34; srcset=&#34;
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_4841729699aa59b7b9b376199d86801d.webp 400w,
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_1d106f2fc726ddbdda76d452e1385b29.webp 760w,
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_4841729699aa59b7b9b376199d86801d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;723&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      pairplot
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;unit-based-decoding&#34;&gt;Unit-Based Decoding&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Raster Plots&lt;/li&gt;
+&lt;li&gt;PSTH&lt;/li&gt;
+&lt;li&gt;Firing Rate&lt;/li&gt;
+&lt;li&gt;Mutual Information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A sample of &lt;code&gt;raster plot&lt;/code&gt; is shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pairplot&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;raster plot&#34; srcset=&#34;
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_dd621de8a28409605b56c8ab5cd63ccb.webp 400w,
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_8703be54ad3cb2ccc501a84702ed96d7.webp 760w,
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_dd621de8a28409605b56c8ab5cd63ccb.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;402&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      pairplot
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;According to this neuron, showing the stimulus to the subject and encoding it happens in approximately 3000 bases. According to the task, it has been pointed out that the encoding interval is between 3050 and 3200, and this indicates that the raster plot is correct for these neurons. In the same way, the approximate range of 5400 to 5600 is related to memory and the approximate range of 6500 to 6650 is also related to the saccade stage.&lt;/p&gt;
+&lt;h2 id=&#34;population-based-decoding&#34;&gt;Population-Based Decoding&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use Machine Learning techniques like SVM to Predict and decode neurons performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The figure below shows recall for each angle over time with a window of 100 and stride&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-recall&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;recall&#34; srcset=&#34;
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_b7403a76a449efc6f89468867255d157.webp 400w,
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_83f482bd494f50a0455870f1344846f2.webp 760w,
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_b7403a76a449efc6f89468867255d157.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;256&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      recall
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Behavioral Analysis of subjects by designing a Psychopy task and analyzing the results</title>
+      <link>https://amirhosein-mesbah.github.io/project/behavioral_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/behavioral_analysis/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve used the collected data from &lt;a href=&#34;https://github.com/amirhosein-mesbah/NeuroScience/tree/main/Psychopy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Psychopy Task&lt;/a&gt;, and several analyses have been done on this data.&lt;/p&gt;
+&lt;h2 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Correcting Column names&lt;/li&gt;
+&lt;li&gt;scaling reaction times&lt;/li&gt;
+&lt;li&gt;handling NaN values&lt;/li&gt;
+&lt;li&gt;removing outliers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exploring-the-data&#34;&gt;Exploring the Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;looking for correlation and relation of each pair of features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prediction-of-behavioral-characteristics&#34;&gt;Prediction of Behavioral Characteristics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;looking any relation between &lt;code&gt;reaction time&lt;/code&gt; and other features&lt;/li&gt;
+&lt;li&gt;looking any relation between &lt;code&gt;accuracy&lt;/code&gt; and other features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;psychometric-fitting&#34;&gt;Psychometric Fitting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fit psychometic functions for &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;visual field&lt;/code&gt; and &lt;code&gt;Eccentricity&lt;/code&gt; as a variable&lt;br&gt;
+psychometic function for location of one of the subjects is shown below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-psychometic&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;psychometic&#34; srcset=&#34;
+               /project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_d72a1f0c4dde9ddad971aecb2d925673.webp 400w,
+               /project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_8eca7d1169b95d604854e919769e8fbd.webp 760w,
+               /project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_d72a1f0c4dde9ddad971aecb2d925673.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;518&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      psychometic
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;spread-of-pses&#34;&gt;Spread of PSEs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Statistical Test to check if PSEs for different &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;visual field&lt;/code&gt; and &lt;code&gt;Eccentricity&lt;/code&gt; are independent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reaction-time-correlation-to-choice-complexity&#34;&gt;Reaction Time Correlation to Choice Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the relationship between &lt;code&gt;reaction time&lt;/code&gt; and &lt;code&gt;handness&lt;/code&gt; of each subject&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;representational-similarity-analysis-rsa&#34;&gt;Representational Similarity Analysis (RSA)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;check similarity of PSEs for &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;visual field&lt;/code&gt; and &lt;code&gt;Eccentricity&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RSA for `location is shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-location-rsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;location RSA&#34; srcset=&#34;
+               /project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_80d7dfdbe1615d53be53a69762b4317b.webp 400w,
+               /project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_2c0c83811e53b12135799761e05ad6b4.webp 760w,
+               /project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_80d7dfdbe1615d53be53a69762b4317b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;575&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      location RSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Implementing multiple Neural Dynamic models of single cell and population models</title>
+      <link>https://amirhosein-mesbah.github.io/project/neural_dynamics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/neural_dynamics/</guid>
+      <description>&lt;p&gt;In this Prject, I&amp;rsquo;ve implemented several models of Neural Dynamic models of single cell and population models with python.&lt;/p&gt;
+&lt;h2 id=&#34;hodgkinhuxley-model&#34;&gt;Hodgkin–Huxley model&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://doi.org/10.1146/annurev.ph.12.030150.002151&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hodgkin–Huxley model&lt;/a&gt; is one of the most recognized models in computational neuroscience. Describing the propagation of an action potential along the squid’s giant axon, the HH model states that the axon carries three ionic currents&lt;/p&gt;
+&lt;h2 id=&#34;leaky-integrate-and-fire&#34;&gt;leaky-integrate-and-fire&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://linkinghub.elsevier.com/retrieve/pii/S0361923099001616&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The leaky integrate and fire model&lt;/a&gt; which can be traced back to Louis Lapicque, is an idealization of a neuron having ohmic leakage current and a number of voltage-gated currents that are completely deactivated at rest.&lt;/p&gt;
+&lt;h2 id=&#34;morris-lecar&#34;&gt;Morris-Lecar&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://linkinghub.elsevier.com/retrieve/pii/S0006349581847820&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Morris-Lecar model&lt;/a&gt; is a two-dimensional &amp;ldquo;reduced&amp;rdquo; excitation model applicable to systems having two noninactivating voltage-sensitive conductances (one voltage variable and one gating variable). The original form of the model employed an instantaneously responding voltage-sensitive $Ca^{2+}$ conductance for excitation and a delayed voltage-dependent $K^{+}$ conductance for recovery. The model has three channels: a potassium channel, a leak, and a calcium channel. In the simplest version of the model, the calcium current depends instantaneously on the voltage.&lt;/p&gt;
+&lt;h2 id=&#34;wilson-cowan&#34;&gt;Wilson-Cowan&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://linkinghub.elsevier.com/retrieve/pii/S0006349572860685&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Wilson-Cowan model&lt;/a&gt; is a powerful yet simple model that describes the interactions between two populations of excitatory and inhibitory neurons. This model is capable of analyzing neural hysteresis phenomena related to binocular vision and is used as a canonical model of visual cortical activity.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Investigating the role of Imitation and Emulation in Decision Making</title>
+      <link>https://amirhosein-mesbah.github.io/project/imitation_emulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/imitation_emulation/</guid>
+      <description>&lt;p&gt;This Project is a Python Implementation of a paper entitled &amp;ldquo;A Neuro‑computational Account of Arbitration between Choice Imitation and Goal Emulation during Human Observational Learning” by Caroline J. Charpentier et al.
+Data of participants in the task is provided by the authors. I used this data to Implement the models that are introduced in the paper to investigate the role of Imitation and emulation in our Daily Decision Making.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;After Implementing the models of paper, the results are as shown in the table below&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Class&lt;/th&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Out of Sample Accuracy%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation Inference&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;49,62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation Inference&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Imitation RL&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;51,37&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Imitation RL&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;53,88&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation RL&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;52,16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation RL&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;52,63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Arbitration&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;54,63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Arbitration&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Due to the results best model is Arbitration model.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

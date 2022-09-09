@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reinforcement Learning | Amir Mesbah</title>
+    <link>https://amirhosein-mesbah.github.io/tag/reinforcement-learning/</link>
+      <atom:link href="https://amirhosein-mesbah.github.io/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Reinforcement Learning</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amirhosein-mesbah.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Reinforcement Learning</title>
+      <link>https://amirhosein-mesbah.github.io/tag/reinforcement-learning/</link>
+    </image>
+    
+    <item>
+      <title>Multi‑Agent Distributed Reinforcement Learning for grid Environment</title>
+      <link>https://amirhosein-mesbah.github.io/project/distributed_rl/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/distributed_rl/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve Implemented a grid environment with 2 agents and 2 goal states. The agents have to learn to reach the goal states by receiving the maximum reward and avoiding obstacles.
+The environment is shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-environment&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Environment&#34; srcset=&#34;
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1416eb188f8010d11382567c7a21997a.webp 400w,
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_b77e239916ac960a35565eacba196935.webp 760w,
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1416eb188f8010d11382567c7a21997a.webp&#34;
+               width=&#34;464&#34;
+               height=&#34;464&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Environment
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Elements of Environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Agents: Blue Squares&lt;/li&gt;
+&lt;li&gt;Obstacles: Red Squares&lt;/li&gt;
+&lt;li&gt;Goal States: Green Squares&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;After training each agent lonely with the sarsa algorithm, I implemented several distributed algorithms like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distributed On-Policy algorithms like SARSA&lt;/li&gt;
+&lt;li&gt;Min-Max Q-Learning&lt;/li&gt;
+&lt;li&gt;Belief Based Algorithm&lt;/li&gt;
+&lt;li&gt;Distributed Actor-Critic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;The average Reward during the learning episodes for SARSA, Min-Max Q-Learning, and Belief-Based learning is shown Below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for SARSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-sarsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for SARSA&#34; srcset=&#34;
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_5ca3224f44a697bc6faab2ce805258bd.webp 400w,
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_2c1c0f683ec0cb3b5ceaa40c612af7cc.webp 760w,
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_5ca3224f44a697bc6faab2ce805258bd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;475&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for SARSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for SARSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-distributed-sarsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for Distributed SARSA&#34; srcset=&#34;
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_c4929aee716db88a2d9593b90356b8c5.webp 400w,
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_b1a0a374fb5ee1964a4c24c226425891.webp 760w,
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_c4929aee716db88a2d9593b90356b8c5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;475&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for Distributed SARSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for Min-Max Q-Learning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-min-max-q-learning&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for Min-Max Q-Learning &#34; srcset=&#34;
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_357a6bef9b5b3a90e5df03442d12746b.webp 400w,
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_f256cb4e7b9861dfdd8998ee3d4e81be.webp 760w,
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_357a6bef9b5b3a90e5df03442d12746b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;455&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for Min-Max Q-Learning
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for Belief Based Algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-belief-based-algorithms&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for Belief Based Algorithms &#34; srcset=&#34;
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_f637ef1192b6db32b5972f9f455c0b19.webp 400w,
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_13933cd65bd9262e3b062b97e8a10e81.webp 760w,
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_f637ef1192b6db32b5972f9f455c0b19.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;465&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for Belief Based Algorithms
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multi-Agent Deep Reinforcement Learning for Fighting Forest Fires</title>
+      <link>https://amirhosein-mesbah.github.io/project/multi_agent_rl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/multi_agent_rl/</guid>
+      <description>&lt;p&gt;In this Project, we Implement a Forest Environment which in fires take place and our agents&amp;rsquo; goal is to stop the fire and save the forest. This Implementation is s part of the final project for the course Interactive Learning in the Autumn semester of 2022, University of Tehran.&lt;/p&gt;
+&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-environemnt&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Environemnt&#34;
+           src=&#34;https://amirhosein-mesbah.github.io/project/multi_agent_rl/env.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Environemnt
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Elements of Environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Forest: Green Area&lt;/li&gt;
+&lt;li&gt;Areas without Tree: Brown Area&lt;/li&gt;
+&lt;li&gt;Burnt forest: Black Area&lt;/li&gt;
+&lt;li&gt;Drone Agents: Purple Squares&lt;/li&gt;
+&lt;li&gt;Fire: Red Squares&lt;/li&gt;
+&lt;li&gt;Houses: Blue Square&lt;/li&gt;
+&lt;li&gt;Station of Drones: Yellow Square&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this environment, the fire spreads according to the wind and the defined probability of transition, and the task of the agents is to prevent the spread of fire by working together. One of the challenging problems of this environment is that it is non-stationary.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;Each Agent is training with a Double-DQN and agents have the ability to communicate with each other in a certain environmental range for better coordination with a level of hierarchy in swarm intelligence.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Due to a Shortage of Computational power, we succeed to train the agents for just four hours. One of the test episodes after training is shown in the video below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-run&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Run&#34;
+           src=&#34;https://amirhosein-mesbah.github.io/project/multi_agent_rl/run.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Run
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;team-members&#34;&gt;Team members:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/BanafshehKarimian&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Banafsheh Karimian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/erfunmirzaei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Erfan Mirzaei&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Network routing with multi-armed bandit algorithms</title>
+      <link>https://amirhosein-mesbah.github.io/project/routing_bandits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/routing_bandits/</guid>
+      <description>&lt;p&gt;In this Project I&amp;rsquo;ve used Bandit Algorithms to solve the Problem of Routing for the graph below:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-network-graph&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Network Graph&#34; srcset=&#34;
+               /project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_1fb01158296b78920b3e56d0180263fd.webp 400w,
+               /project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_4da833e3595a19ba1f49b0ca5e157bb5.webp 760w,
+               /project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_1fb01158296b78920b3e56d0180263fd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;386&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Network Graph
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;algorithms&#34;&gt;Algorithms:&lt;/h2&gt;
+&lt;p&gt;For solving this task I&amp;rsquo;ve used different algorithms for multi-armed bandit problems like UCB and Epsilon-Greedy. each route in the network is considered an arm for a multi-armed bandit and each arm has its own stochastic reward due to the delays that may occur during the route.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Below you can see the average reward for the epsilon greedy algorithm and the percentage of optimal action selection for UCB and epsilon greedy algorithms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the average reward for epsilon greedy algorithm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-epsilon-greedy&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;average reward for epsilon greedy&#34; srcset=&#34;
+               /project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_e5e80e2ba622642551eaf33e529a5103.webp 400w,
+               /project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_f717409e71efbc6a1fc88310e20a9492.webp 760w,
+               /project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_e5e80e2ba622642551eaf33e529a5103.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;412&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      average reward for epsilon greedy
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the percentage of optimal action selection for UCB and epsilon greedy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-optimal-action-selection&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Optimal action selection&#34; srcset=&#34;
+               /project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_ab34479c8b3de9540df35e7d4fddcd6c.webp 400w,
+               /project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_cc605a44e896d6c0f31631fc3351c39c.webp 760w,
+               /project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_ab34479c8b3de9540df35e7d4fddcd6c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;426&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Optimal action selection
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

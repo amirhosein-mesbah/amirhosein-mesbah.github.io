@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BigData | Amir Mesbah</title>
+    <link>https://amirhosein-mesbah.github.io/tag/bigdata/</link>
+      <atom:link href="https://amirhosein-mesbah.github.io/tag/bigdata/index.xml" rel="self" type="application/rss+xml" />
+    <description>BigData</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://amirhosein-mesbah.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>BigData</title>
+      <link>https://amirhosein-mesbah.github.io/tag/bigdata/</link>
+    </image>
+    
+    <item>
+      <title>Building a data pipeline on the Crypto market</title>
+      <link>https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/</guid>
+      <description>&lt;p&gt;In this project, I implemented a real-time data pipeline for crypto information and news about crypto which is crawled from &lt;a href=&#34;https://www.tgju.org/crypto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this website&lt;/a&gt;.
+I&amp;rsquo;ve used docker for running bigdata tools like HDFS, airflow, Kafka, Elasticsearch and Kibana on a virtual container flow of data in this pipeline is shown in the below image&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-flow-of-data&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;flow of data&#34; srcset=&#34;
+               /project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_59e933614771e2f99f722dec0957d3e1.webp 400w,
+               /project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_e1465560fc672eecbbe1c1c954522093.webp 760w,
+               /project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_59e933614771e2f99f722dec0957d3e1.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;384&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      flow of data
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;This Project contains three main Parts:&lt;/p&gt;
+&lt;h2 id=&#34;part1&#34;&gt;Part1:&lt;/h2&gt;
+&lt;p&gt;In this Part, with the help of Apache Airflow, I crawled news and information about each crypto in defined time intervals. after preprocessing and cleaning downloaded data for each time interval, I designed an other dag in airflow for merging data of multiple intervals and saving them in HDFS, and also entering the data into the Kafka channel.&lt;/p&gt;
+&lt;h2 id=&#34;part2&#34;&gt;Part2:&lt;/h2&gt;
+&lt;p&gt;All of Part 2 was about Apache Kafka. In this part, we have 3 different Kafka channels with their own producers and consumers. The channels are as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data channel: data is written in this channel by airflow.&lt;/li&gt;
+&lt;li&gt;Preprocess channel: data cleaning is done in this channel and data is sent to elasticsearch.&lt;/li&gt;
+&lt;li&gt;Statics channel: future statics analysis is done in this channel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;writing and reading data in Kafka is done by the &lt;code&gt;kafka-python&lt;/code&gt; library in python.&lt;/p&gt;
+&lt;h2 id=&#34;part-3&#34;&gt;Part 3&lt;/h2&gt;
+&lt;p&gt;Saving data in elastic search and visualizing statistics using Kibana were the goals of this part. After saving data in Elasticsearch by &lt;code&gt;elastticsearch&lt;/code&gt; library of python, I applied several visualization graphs with the help of Kibana and finally use them to design a live dashboard in Kibana. The dashboarded is in Persian language due to Persian data and is shown in the below image&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-dashboard&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;dashboard&#34; srcset=&#34;
+               /project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_29d3eb81feebdd340de61af34d2a181b.webp 400w,
+               /project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_9ed2d58985fe22bd5b935dc59f6d434e.webp 760w,
+               /project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_29d3eb81feebdd340de61af34d2a181b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      dashboard
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Apache Spark for NLP and Machine Learning tasks</title>
+      <link>https://amirhosein-mesbah.github.io/project/spark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/spark/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve used Apache Spark for NLP and Machine Learning tasks.&lt;/p&gt;
+&lt;h2 id=&#34;spark-for-machine-learning&#34;&gt;Spark for Machine Learning&lt;/h2&gt;
+&lt;h3 id=&#34;model&#34;&gt;model&lt;/h3&gt;
+&lt;p&gt;In this Task, I&amp;rsquo;ve used &lt;code&gt;spark ML&lt;/code&gt; to build an mlp model and apply a multi-label classification on a `spark data frame. After Preprocessing Data and creating a column for labels, Standardization and PCA are applied to data respectfully.&lt;/p&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+&lt;p&gt;The results of training a mlp model on the proposed dataset are shown in the table below:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Test Accuracy&lt;/th&gt;
+&lt;th&gt;Test Recall&lt;/th&gt;
+&lt;th&gt;Test Precision&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MLP&lt;/td&gt;
+&lt;td&gt;96,01%&lt;/td&gt;
+&lt;td&gt;96,01%&lt;/td&gt;
+&lt;td&gt;92,19%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;spark-for-nlp&#34;&gt;Spark for NLP&lt;/h2&gt;
+&lt;p&gt;For this task, I downloaded the &lt;code&gt;Les Misérables&lt;/code&gt; book and created a &lt;code&gt;spark dataframe&lt;/code&gt; with sentences from the book. After that, I created the &lt;code&gt;bigram&lt;/code&gt; and &lt;code&gt;trigram&lt;/code&gt; of the prepared data frame and compute the count of each bigram and trigram.
+for the last part, I implemented a logistic regression to see if there is any relationship between the length of words in bigram or trigram.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

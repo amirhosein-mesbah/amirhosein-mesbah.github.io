@@ -8,8 +8,6 @@
   <url>
     <loc>https://amirhosein-mesbah.github.io/home-unused/skills/</loc><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/home-unused/experience/</loc><changefreq>weekly</changefreq></url>
-  <url>
     <loc>https://amirhosein-mesbah.github.io/home-unused/accomplishments/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://amirhosein-mesbah.github.io/home-unused/posts/</loc><changefreq>weekly</changefreq></url>
@@ -28,13 +26,19 @@
   <url>
     <loc>https://amirhosein-mesbah.github.io/event/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/project/parkinson/</loc><lastmod>2021-02-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://amirhosein-mesbah.github.io/tag/deep-learning/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/tag/past/</loc><lastmod>2021-02-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://amirhosein-mesbah.github.io/project/distributed_dl/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/project/</loc><lastmod>2021-02-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://amirhosein-mesbah.github.io/project/distributed_rl/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/tags/</loc><lastmod>2021-02-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://amirhosein-mesbah.github.io/tag/past/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/tag/reinforcement-learning/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/tags/</loc><lastmod>2021-10-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://amirhosein-mesbah.github.io/tag/academic/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -62,4 +66,42 @@
   <url>
     <loc>https://amirhosein-mesbah.github.io/publication/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/home-unused/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://amirhosein-mesbah.github.io/project/continuous_time/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/discrete_time/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/behavioral_analysis/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/tag/bigdata/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/crowd_counting/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/parkinson/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/federated/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/gcn/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/home-unused/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/image_captioning/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/neural_dynamics/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/imitation_emulation/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/machine_translation/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/multi_agent_rl/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/routing_bandits/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/tag/neuroscience/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/relation_extraction/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/semantic_segmentation/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/project/spark/</loc><changefreq>weekly</changefreq></url></urlset>

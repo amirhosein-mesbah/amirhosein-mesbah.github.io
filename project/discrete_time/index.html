@@ -1,0 +1,1357 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Amir Mesbah" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Spike Sorting, Unit-based decoding and population based decoding on single cell data." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://amirhosein-mesbah.github.io/project/discrete_time/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3495fc6150afdd177f1d04fbba9f5e2c.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://amirhosein-mesbah.github.io/project/discrete_time/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@amirh_mesbah" />
+    <meta property="twitter:creator" content="@amirh_mesbah" />
+  
+  <meta property="og:site_name" content="Amir Mesbah" />
+  <meta property="og:url" content="https://amirhosein-mesbah.github.io/project/discrete_time/" />
+  <meta property="og:title" content="Analysing Discrete‑Time Neural Signals | Amir Mesbah" />
+  <meta property="og:description" content="Spike Sorting, Unit-based decoding and population based decoding on single cell data." /><meta property="og:image" content="https://amirhosein-mesbah.github.io/project/discrete_time/featured.jpg" />
+    <meta property="twitter:image" content="https://amirhosein-mesbah.github.io/project/discrete_time/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+    
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://amirhosein-mesbah.github.io/project/discrete_time/"
+  },
+  "headline": "Analysing Discrete‑Time Neural Signals",
+  
+  "image": [
+    "https://amirhosein-mesbah.github.io/project/discrete_time/featured.jpg"
+  ],
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Amir Mesbah"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Amirhossein Mesbah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amirhosein-mesbah.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Spike Sorting, Unit-based decoding and population based decoding on single cell data."
+}
+</script>
+
+  
+
+  
+
+  
+
+
+  <title>Analysing Discrete‑Time Neural Signals | Amir Mesbah</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d306a9c79bf829c116c109f537bd0915" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Amir Mesbah</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Amir Mesbah</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#experience"><span>Experience</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Analysing Discrete‑Time Neural Signals</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/amirhosein-mesbah/NeuroScience/tree/main/Discrete_Time_Neural_Signals" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 504px;">
+  <div style="position: relative">
+    <img src="/project/discrete_time/featured_hu441139a094793ce80dfbc0159bdea239_72056_720x2500_fit_q75_h2_lanczos.webp" width="720" height="504" alt="" class="featured-image">
+    <span class="article-header-caption">photo from <a href="https://www.the-scientist.com/infographics/infographic-single-cell-recordings-identify-number-neurons-69201" target="_blank" rel="noopener">the-scientist</a></span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>In this project, I&rsquo;ve worked on Signle Cell data. Spike Sorting, Unit-based Decoding and Population-based decoding are the three tasks that have been done in this project.</p>
+<h2 id="spike-sorting">Spike Sorting</h2>
+<p>After Applying butterworth highpass filter on raw data, we need to calculate threshold for detecting peaks and after extracting peaks and applying PCA for Dimensionality Reduction we use K-Means algorithm for clustering.</p>
+<p>Below there is a PairPlot for K-means Algorithm for 9 proposed clusters</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-pairplot">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="pairplot" srcset="
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_4841729699aa59b7b9b376199d86801d.webp 400w,
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_1d106f2fc726ddbdda76d452e1385b29.webp 760w,
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_4841729699aa59b7b9b376199d86801d.webp"
+               width="760"
+               height="723"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      pairplot
+    </figcaption></figure>
+</p>
+<h2 id="unit-based-decoding">Unit-Based Decoding</h2>
+<ul>
+<li>Raster Plots</li>
+<li>PSTH</li>
+<li>Firing Rate</li>
+<li>Mutual Information</li>
+</ul>
+<p>A sample of <code>raster plot</code> is shown below</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-pairplot">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="raster plot" srcset="
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_dd621de8a28409605b56c8ab5cd63ccb.webp 400w,
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_8703be54ad3cb2ccc501a84702ed96d7.webp 760w,
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_dd621de8a28409605b56c8ab5cd63ccb.webp"
+               width="760"
+               height="402"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      pairplot
+    </figcaption></figure>
+</p>
+<p>According to this neuron, showing the stimulus to the subject and encoding it happens in approximately 3000 bases. According to the task, it has been pointed out that the encoding interval is between 3050 and 3200, and this indicates that the raster plot is correct for these neurons. In the same way, the approximate range of 5400 to 5600 is related to memory and the approximate range of 6500 to 6650 is also related to the saccade stage.</p>
+<h2 id="population-based-decoding">Population-Based Decoding</h2>
+<ul>
+<li>Use Machine Learning techniques like SVM to Predict and decode neurons performance.</li>
+</ul>
+<p>The figure below shows recall for each angle over time with a window of 100 and stride</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-recall">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="recall" srcset="
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_b7403a76a449efc6f89468867255d157.webp 400w,
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_83f482bd494f50a0455870f1344846f2.webp 760w,
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_b7403a76a449efc6f89468867255d157.webp"
+               width="760"
+               height="256"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      recall
+    </figcaption></figure>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/neuroscience/">Neuroscience</a>
+  
+  <a class="badge badge-light" href="/tag/past/">past</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://amirhosein-mesbah.github.io/project/discrete_time/&amp;text=Analysing%20Discrete%e2%80%91Time%20Neural%20Signals" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://amirhosein-mesbah.github.io/project/discrete_time/&amp;t=Analysing%20Discrete%e2%80%91Time%20Neural%20Signals" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Analysing%20Discrete%e2%80%91Time%20Neural%20Signals&amp;body=https://amirhosein-mesbah.github.io/project/discrete_time/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://amirhosein-mesbah.github.io/project/discrete_time/&amp;title=Analysing%20Discrete%e2%80%91Time%20Neural%20Signals" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Analysing%20Discrete%e2%80%91Time%20Neural%20Signals%20https://amirhosein-mesbah.github.io/project/discrete_time/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://amirhosein-mesbah.github.io/project/discrete_time/&amp;title=Analysing%20Discrete%e2%80%91Time%20Neural%20Signals" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/amir-mesbah/avatar_hub076f4e6af2a5fa118eb303586cb4805_113001_270x270_fill_q75_lanczos_center.jpg" alt="Amir Mesbah">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Amir Mesbah</h5>
+      <h6 class="card-subtitle">Master student in Artificial Intelligence and Robotics</h6>
+      <p class="card-text">My research interests include Machine Learning and Neuroscience.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/amirh_mesbah" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/amirhosein-mesbah" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/amirhossein-mesbah/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/uploads/resume.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me.
+  </p>
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.5f2242f9e416ca8987b1818a173b5651.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

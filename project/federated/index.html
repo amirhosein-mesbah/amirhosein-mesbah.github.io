@@ -1,0 +1,1359 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Amir Mesbah" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Image segmentation by using Federated Learning for autonomous driving application" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://amirhosein-mesbah.github.io/project/federated/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3495fc6150afdd177f1d04fbba9f5e2c.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://amirhosein-mesbah.github.io/project/federated/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@amirh_mesbah" />
+    <meta property="twitter:creator" content="@amirh_mesbah" />
+  
+  <meta property="og:site_name" content="Amir Mesbah" />
+  <meta property="og:url" content="https://amirhosein-mesbah.github.io/project/federated/" />
+  <meta property="og:title" content="Federated Learning on Semantic Segmentation task (FedAVG, FedADMM) | Amir Mesbah" />
+  <meta property="og:description" content="Image segmentation by using Federated Learning for autonomous driving application" /><meta property="og:image" content="https://amirhosein-mesbah.github.io/project/federated/featured.jpg" />
+    <meta property="twitter:image" content="https://amirhosein-mesbah.github.io/project/federated/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+    
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://amirhosein-mesbah.github.io/project/federated/"
+  },
+  "headline": "Federated Learning on Semantic Segmentation task (FedAVG, FedADMM)",
+  
+  "image": [
+    "https://amirhosein-mesbah.github.io/project/federated/featured.jpg"
+  ],
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Amir Mesbah"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Amirhossein Mesbah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amirhosein-mesbah.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Image segmentation by using Federated Learning for autonomous driving application"
+}
+</script>
+
+  
+
+  
+
+  
+
+
+  <title>Federated Learning on Semantic Segmentation task (FedAVG, FedADMM) | Amir Mesbah</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="55659a376b679559dd0aada49a1e57c4" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Amir Mesbah</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Amir Mesbah</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#experience"><span>Experience</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Federated Learning on Semantic Segmentation task (FedAVG, FedADMM)</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/amirhosein-mesbah/Deep_Learning/tree/main/Federated_Learning" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 534px;">
+  <div style="position: relative">
+    <img src="/project/federated/featured_hua950a2317d96eb59a4a578075213cd6b_59619_720x2500_fit_q75_h2_lanczos.webp" width="720" height="534" alt="" class="featured-image">
+    <span class="article-header-caption">photo by <a href="https://towardsdatascience.com/introduction-to-federated-learning-and-privacy-preservation-75644686b559" target="_blank" rel="noopener">Kapil Chandorikar</a></span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Federated Learning is one of the new eras of Deep Learning whose aim is to train a global Network with respect to private local networks. Leaning on smartphones and medical tasks are some of the important applications of Federated learning.</p>
+<p>In this Project, I&rsquo;ve used federated learning for Image segmentation of Autonomous Driving cars data. We can consider a network of each car as a private and local network and we want to train a global network to be robust against perturbations.
+This project is a Pytorch Implementation of two papers</p>
+<ul>
+<li>&ldquo;FEDERATED OPTIMIZATION IN HETEROGENEOUS NETWORKS&rdquo; by  Tian Li et al introduces the FedADMM algorithm for aggregation of weights of local networks</li>
+<li>&ldquo;Communication-Efficient Learning of Deep Networks from Decentralized Data&rdquo; by H. Brendan McMahan et al introduces Federate learning for the first time and uses the average aggregation method.</li>
+</ul>
+<h2 id="data">Data</h2>
+<p>I&rsquo;ve divided Camvid Dataset which is a famous dataset for segmentation, for each local network and local networks datasets are Non-IID.</p>
+<h2 id="model">Model</h2>
+<p>For the segmentation task, I&rsquo;ve used SegNet. we have multiple local SegNet Networks for each Autonomous car and a Global Network for Aggregating weights of local networks. All of the Networks have the same Architecture.</p>
+<p>Below Loss function of Both Aggregation methods are shown:</p>
+<ul>
+<li>Loss function of Average Aggregation during communication rounds for 3 local networks and one global network</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-average-loss">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="average loss" srcset="
+               /project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_d4a58bc613567db3c161be982a629922.webp 400w,
+               /project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_2b61b48c8a2a5a93b5bae83f17b33fe2.webp 760w,
+               /project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_d4a58bc613567db3c161be982a629922.webp"
+               width="461"
+               height="333"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      average loss
+    </figcaption></figure>
+</p>
+<ul>
+<li>Loss function of ADMM Aggregation (FedADMM) during communication rounds for 2 local networks and one global network</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-admm-loss">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="admm loss" srcset="
+               /project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_19a30bcbd1fa4f7d958b6d47a3393a31.webp 400w,
+               /project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_680cd78e3066958bcef4bcfacab68b33.webp 760w,
+               /project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_19a30bcbd1fa4f7d958b6d47a3393a31.webp"
+               width="459"
+               height="324"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      admm loss
+    </figcaption></figure>
+</p>
+<h2 id="results">Results</h2>
+<p>Some of the segmented images with the fedADMM aggregation are in blew figure, we can see that this method works as well as <a href="https://github.com/amirhosein-mesbah/Deep_Learning/tree/main/Image_Segmentation_SegNet" target="_blank" rel="noopener">centralized training of segnet</a></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-output-admm">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="output admm" srcset="
+               /project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_874dc3389cb12696632ca72bca978ff0.webp 400w,
+               /project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_75a3a74700d173bf7d8abbffed196022.webp 760w,
+               /project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_874dc3389cb12696632ca72bca978ff0.webp"
+               width="760"
+               height="715"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      output admm
+    </figcaption></figure>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tag/past/">past</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://amirhosein-mesbah.github.io/project/federated/&amp;text=Federated%20Learning%20on%20Semantic%20Segmentation%20task%20%28FedAVG,%20FedADMM%29" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://amirhosein-mesbah.github.io/project/federated/&amp;t=Federated%20Learning%20on%20Semantic%20Segmentation%20task%20%28FedAVG,%20FedADMM%29" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Federated%20Learning%20on%20Semantic%20Segmentation%20task%20%28FedAVG,%20FedADMM%29&amp;body=https://amirhosein-mesbah.github.io/project/federated/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://amirhosein-mesbah.github.io/project/federated/&amp;title=Federated%20Learning%20on%20Semantic%20Segmentation%20task%20%28FedAVG,%20FedADMM%29" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Federated%20Learning%20on%20Semantic%20Segmentation%20task%20%28FedAVG,%20FedADMM%29%20https://amirhosein-mesbah.github.io/project/federated/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://amirhosein-mesbah.github.io/project/federated/&amp;title=Federated%20Learning%20on%20Semantic%20Segmentation%20task%20%28FedAVG,%20FedADMM%29" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/amir-mesbah/avatar_hub076f4e6af2a5fa118eb303586cb4805_113001_270x270_fill_q75_lanczos_center.jpg" alt="Amir Mesbah">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Amir Mesbah</h5>
+      <h6 class="card-subtitle">Master student in Artificial Intelligence and Robotics</h6>
+      <p class="card-text">My research interests include Machine Learning and Neuroscience.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/amirh_mesbah" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/amirhosein-mesbah" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/amirhossein-mesbah/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/uploads/resume.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me.
+  </p>
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.5f2242f9e416ca8987b1818a173b5651.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

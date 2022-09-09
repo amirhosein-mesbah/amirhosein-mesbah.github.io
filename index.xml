@@ -54,14 +54,6 @@
     </item>
     
     <item>
-      <title>Experience</title>
-      <link>https://amirhosein-mesbah.github.io/home-unused/experience/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://amirhosein-mesbah.github.io/home-unused/experience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Accomplish&amp;shy;ments</title>
       <link>https://amirhosein-mesbah.github.io/home-unused/accomplishments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -135,55 +127,365 @@
     </item>
     
     <item>
-      <title>Detecting Parkinson disease using signals of speech data with ensemble learning</title>
-      <link>https://amirhosein-mesbah.github.io/project/parkinson/</link>
-      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://amirhosein-mesbah.github.io/project/parkinson/</guid>
-      <description>&lt;h2 id=&#34;decription&#34;&gt;Decription:&lt;/h2&gt;
-&lt;p&gt;This Project is a group work with &lt;a href=&#34;https://github.com/zaha2020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zahra Habibzadeh&lt;/a&gt;. in this project we used signals of speech data for a binary classification task to check if the person to whom the sound belongs has Parkinson&amp;rsquo;s disease or not.&lt;/p&gt;
-&lt;p&gt;The data used in this project is related to an article with the following title by Jefferson S.Almeida et al:&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Detecting Parkinson’s disease with sustained phonation and speech signals using machine learning techniques&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;We implemented the methods used in this paper for data preprocessing, dimensionality reduction and model training. Also, in addition to these cases, we also used ensemble models for training and better performance.&lt;/p&gt;
-&lt;h2 id=&#34;result&#34;&gt;Result:&lt;/h2&gt;
-&lt;p&gt;The best performance was related to the ensemble model using KNN algorithm, whose accuracy was equal to 96,10%. The results of the rest of the models are available in the table below.&lt;/p&gt;
+      <title>Distributed Gossip training for Fashion MNIST classification</title>
+      <link>https://amirhosein-mesbah.github.io/project/distributed_dl/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/distributed_dl/</guid>
+      <description>&lt;p&gt;This Project is a Pytorch Implementation of a paper entitled &amp;ldquo;Gossip training for deep learning&amp;rdquo; by Michael Blot et al which proposed a distributed method for training deep learning networks.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve used the Gossip training method for a multilabel classification task&lt;/p&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;p&gt;For implementing gossip training I chose &lt;a href=&#34;https://github.com/zalandoresearch/fashion-mnist&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fashion MNIST&lt;/a&gt; for training and evaluation of networks. Images of this dataset are gray-level images in 10 classes as described below:&lt;br&gt;
+&lt;code&gt;0: T-shirt/top, 1: Trouser, 2: Pullover, 3: Dress, 4: Coat, 5: Sandal, 6: Shirt, 7: Sneaker, 8: Bag, 9: Ankle boot&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;As a preprocessing step, before Training the networks I normalized the images.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve implemented different Configurations of Gossip training to investigate the role of probability parameters, Communication matrix, and the kind of communication graph.&lt;br&gt;
+different models are listed below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;centralized model&lt;/li&gt;
+&lt;li&gt;Gossip training
+&lt;ul&gt;
+&lt;li&gt;Gossip training for different values of parameter &lt;code&gt;p&lt;/code&gt; as the probability of communication&lt;/li&gt;
+&lt;li&gt;Gossip training for different communication matrices
+&lt;ul&gt;
+&lt;li&gt;Random Matrix&lt;/li&gt;
+&lt;li&gt;Double Random Matix&lt;/li&gt;
+&lt;li&gt;The matrix variates with time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Gossip training for Different Communication graphs
+&lt;ul&gt;
+&lt;li&gt;strongly connected&lt;/li&gt;
+&lt;li&gt;periodically strongly connected&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below you can see loss and accuracy during training for different amounts of parameter &lt;code&gt;p&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loss during training&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-loss&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;loss&#34; srcset=&#34;
+               /project/distributed_dl/loss_hu590d60ad01a2db89e290cebf086527e8_37803_51cb2b79c9e478f200615a86cda72a92.webp 400w,
+               /project/distributed_dl/loss_hu590d60ad01a2db89e290cebf086527e8_37803_f6094f393703db0a40b7d5d9b4121fbd.webp 760w,
+               /project/distributed_dl/loss_hu590d60ad01a2db89e290cebf086527e8_37803_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_dl/loss_hu590d60ad01a2db89e290cebf086527e8_37803_51cb2b79c9e478f200615a86cda72a92.webp&#34;
+               width=&#34;722&#34;
+               height=&#34;459&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      loss
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accuracy during training&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-accuracy&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Accuracy&#34; srcset=&#34;
+               /project/distributed_dl/accuracy_huc3993bd0b883f40f5898fc859c8d5dca_40476_094919340985d9835fac85673bc41909.webp 400w,
+               /project/distributed_dl/accuracy_huc3993bd0b883f40f5898fc859c8d5dca_40476_4e12a8126af741306d0f505e07280063.webp 760w,
+               /project/distributed_dl/accuracy_huc3993bd0b883f40f5898fc859c8d5dca_40476_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_dl/accuracy_huc3993bd0b883f40f5898fc859c8d5dca_40476_094919340985d9835fac85673bc41909.webp&#34;
+               width=&#34;726&#34;
+               height=&#34;464&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Accuracy
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Results for different values of parameter &lt;code&gt;p&lt;/code&gt; are in the below table&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Algorithms&lt;/th&gt;
+&lt;th&gt;Parameter &lt;code&gt;p&lt;/code&gt;&lt;/th&gt;
 &lt;th&gt;Accuracy%&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Logistic regression&lt;/td&gt;
-&lt;td&gt;87,23&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;87,14&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;SVM&lt;/td&gt;
-&lt;td&gt;93,97&lt;/td&gt;
+&lt;td&gt;0.5&lt;/td&gt;
+&lt;td&gt;87,29&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Decision Tree&lt;/td&gt;
-&lt;td&gt;84,04&lt;/td&gt;
+&lt;td&gt;0.2&lt;/td&gt;
+&lt;td&gt;87,25&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;KNN(K=1)&lt;/td&gt;
-&lt;td&gt;94,33&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;MLP&lt;/td&gt;
-&lt;td&gt;91,84&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;RBF&lt;/td&gt;
-&lt;td&gt;93,26&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ensemble&lt;/td&gt;
-&lt;td&gt;96,10&lt;/td&gt;
+&lt;td&gt;0.1&lt;/td&gt;
+&lt;td&gt;86,45&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;Results for different Communication matrices are as below&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;communication matrix&lt;/th&gt;
+&lt;th&gt;Accuracy%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Random&lt;/td&gt;
+&lt;td&gt;90,98&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Double Random&lt;/td&gt;
+&lt;td&gt;90,56&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Varying with time&lt;/td&gt;
+&lt;td&gt;86,94&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Results for different Communication graphs are as below&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;communication graph&lt;/th&gt;
+&lt;th&gt;Accuracy%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Periodically strongly connected&lt;/td&gt;
+&lt;td&gt;89,18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Strongly connected&lt;/td&gt;
+&lt;td&gt;89,81&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multi‑Agent Distributed Reinforcement Learning for grid Environment</title>
+      <link>https://amirhosein-mesbah.github.io/project/distributed_rl/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/distributed_rl/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve Implemented a grid environment with 2 agents and 2 goal states. The agents have to learn to reach the goal states by receiving the maximum reward and avoiding obstacles.
+The environment is shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-environment&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Environment&#34; srcset=&#34;
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1416eb188f8010d11382567c7a21997a.webp 400w,
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_b77e239916ac960a35565eacba196935.webp 760w,
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1416eb188f8010d11382567c7a21997a.webp&#34;
+               width=&#34;464&#34;
+               height=&#34;464&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Environment
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Elements of Environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Agents: Blue Squares&lt;/li&gt;
+&lt;li&gt;Obstacles: Red Squares&lt;/li&gt;
+&lt;li&gt;Goal States: Green Squares&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;After training each agent lonely with the sarsa algorithm, I implemented several distributed algorithms like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distributed On-Policy algorithms like SARSA&lt;/li&gt;
+&lt;li&gt;Min-Max Q-Learning&lt;/li&gt;
+&lt;li&gt;Belief Based Algorithm&lt;/li&gt;
+&lt;li&gt;Distributed Actor-Critic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;The average Reward during the learning episodes for SARSA, Min-Max Q-Learning, and Belief-Based learning is shown Below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for SARSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-sarsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for SARSA&#34; srcset=&#34;
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_5ca3224f44a697bc6faab2ce805258bd.webp 400w,
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_2c1c0f683ec0cb3b5ceaa40c612af7cc.webp 760w,
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_5ca3224f44a697bc6faab2ce805258bd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;475&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for SARSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for SARSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-distributed-sarsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for Distributed SARSA&#34; srcset=&#34;
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_c4929aee716db88a2d9593b90356b8c5.webp 400w,
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_b1a0a374fb5ee1964a4c24c226425891.webp 760w,
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_c4929aee716db88a2d9593b90356b8c5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;475&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for Distributed SARSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for Min-Max Q-Learning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-min-max-q-learning&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for Min-Max Q-Learning &#34; srcset=&#34;
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_357a6bef9b5b3a90e5df03442d12746b.webp 400w,
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_f256cb4e7b9861dfdd8998ee3d4e81be.webp 760w,
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_357a6bef9b5b3a90e5df03442d12746b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;455&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for Min-Max Q-Learning
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Average Reward during the learning episodes for Belief Based Algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-belief-based-algorithms&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Average reward for Belief Based Algorithms &#34; srcset=&#34;
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_f637ef1192b6db32b5972f9f455c0b19.webp 400w,
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_13933cd65bd9262e3b062b97e8a10e81.webp 760w,
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_f637ef1192b6db32b5972f9f455c0b19.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;465&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Average reward for Belief Based Algorithms
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -415,6 +717,1700 @@ $$&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://amirhosein-mesbah.github.io/admin/config.yml</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Analysing Continuous‑Time Neural Signals for different data modalities</title>
+      <link>https://amirhosein-mesbah.github.io/project/continuous_time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/continuous_time/</guid>
+      <description>&lt;h2 id=&#34;electroencephalogram&#34;&gt;Electroencephalogram&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;EEgLab toolbox in Matlab
+I&amp;rsquo;ve used EEgLab toolBox in Matlab for preprocessing EEG data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resampling&lt;/li&gt;
+&lt;li&gt;Re‑referencing&lt;/li&gt;
+&lt;li&gt;baseline normalization&lt;/li&gt;
+&lt;li&gt;creating epochs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Representational Dissimilarity Matrices (RDM) Analysis
+checking for the dissimilarity of brain state in the IT cortex for three different stimulus. RSA diagram is shown below&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-rsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;RSA&#34; srcset=&#34;
+               /project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_ac32edbceb959011dc3e7d096dd9c573.webp 400w,
+               /project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_12cadc8eb148bd2afe064dceed4b3d50.webp 760w,
+               /project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/continuous_time/RSA_eeg_hu712e0956479966ce6a9ed6b063ec96ca_104461_ac32edbceb959011dc3e7d096dd9c573.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;310&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      RSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;As shown in the Figure above, at the time of 200 milliseconds, the graphs of all 3 stimuli overlap and these 3 stimuli cannot be distinguished from each other. So 200 milliseconds is not a good time to distinguish between 3 stimuli. According to the course materials and the class, cognition occurs in the IT cortex between 00 and 600 milliseconds. Therefore, according to the graph of this interval, it can be a good interval for distinguishing between 3 stimuli. Also, considering that the input image does not reach the IT cortex until 150 milliseconds, it can be seen in the diagram that from the beginning of time until about 150 milliseconds, the diagrams of the 3 stimuli overlap to a large extent.&lt;/p&gt;
+&lt;h2 id=&#34;local-field-potentials&#34;&gt;Local Field Potentials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Phase Lock Analysis
+In this part, we investigate phase locking between two areas of &lt;code&gt;v4&lt;/code&gt; and &lt;code&gt;EFE&lt;/code&gt; in the IT Cortex.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-plv&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;PLV&#34; srcset=&#34;
+               /project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_a0ae577098350415ac3c0290074fd665.webp 400w,
+               /project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_334e64c18a8652872e28380a3d53607f.webp 760w,
+               /project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/continuous_time/PLV_hu1f73e733c96b05c1ae30c96884cfec7d_130645_a0ae577098350415ac3c0290074fd665.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;620&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      PLV
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;In the delta, theta, and alpha ranges, we have phase lock in approximately 2300 milliseconds, 1650 milliseconds, and 1300 milliseconds respectively. According to Figure 13, which shows the memory-guided saccade task, these phase-locks can be related to the cue phase. That is, when showing the stimulus to the subject, the v4 and efe regions are phase-locked together.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grager Casualty
+&lt;ul&gt;
+&lt;li&gt;Checking for connectivity between &lt;code&gt;v4&lt;/code&gt; and &lt;code&gt;ECE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fmri&#34;&gt;fMRI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Seed‑based Correlation Analysis on fMRI data modality to find significant voxels&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analysing Discrete‑Time Neural Signals</title>
+      <link>https://amirhosein-mesbah.github.io/project/discrete_time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/discrete_time/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve worked on Signle Cell data. Spike Sorting, Unit-based Decoding and Population-based decoding are the three tasks that have been done in this project.&lt;/p&gt;
+&lt;h2 id=&#34;spike-sorting&#34;&gt;Spike Sorting&lt;/h2&gt;
+&lt;p&gt;After Applying butterworth highpass filter on raw data, we need to calculate threshold for detecting peaks and after extracting peaks and applying PCA for Dimensionality Reduction we use K-Means algorithm for clustering.&lt;/p&gt;
+&lt;p&gt;Below there is a PairPlot for K-means Algorithm for 9 proposed clusters&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pairplot&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;pairplot&#34; srcset=&#34;
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_4841729699aa59b7b9b376199d86801d.webp 400w,
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_1d106f2fc726ddbdda76d452e1385b29.webp 760w,
+               /project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/discrete_time/clusters_hu9b40a1e5fe8f2bf4a29ae7abf5a77f71_100309_4841729699aa59b7b9b376199d86801d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;723&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      pairplot
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;unit-based-decoding&#34;&gt;Unit-Based Decoding&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Raster Plots&lt;/li&gt;
+&lt;li&gt;PSTH&lt;/li&gt;
+&lt;li&gt;Firing Rate&lt;/li&gt;
+&lt;li&gt;Mutual Information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A sample of &lt;code&gt;raster plot&lt;/code&gt; is shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pairplot&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;raster plot&#34; srcset=&#34;
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_dd621de8a28409605b56c8ab5cd63ccb.webp 400w,
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_8703be54ad3cb2ccc501a84702ed96d7.webp 760w,
+               /project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/discrete_time/raster_hu71151b4444cc82ed5b5afbba9d8eafdc_435304_dd621de8a28409605b56c8ab5cd63ccb.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;402&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      pairplot
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;According to this neuron, showing the stimulus to the subject and encoding it happens in approximately 3000 bases. According to the task, it has been pointed out that the encoding interval is between 3050 and 3200, and this indicates that the raster plot is correct for these neurons. In the same way, the approximate range of 5400 to 5600 is related to memory and the approximate range of 6500 to 6650 is also related to the saccade stage.&lt;/p&gt;
+&lt;h2 id=&#34;population-based-decoding&#34;&gt;Population-Based Decoding&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use Machine Learning techniques like SVM to Predict and decode neurons performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The figure below shows recall for each angle over time with a window of 100 and stride&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-recall&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;recall&#34; srcset=&#34;
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_b7403a76a449efc6f89468867255d157.webp 400w,
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_83f482bd494f50a0455870f1344846f2.webp 760w,
+               /project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/discrete_time/recall_hu01cbc7f16c22bb4bce6a93d067eec9d0_48599_b7403a76a449efc6f89468867255d157.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;256&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      recall
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Behavioral Analysis of subjects by designing a Psychopy task and analyzing the results</title>
+      <link>https://amirhosein-mesbah.github.io/project/behavioral_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/behavioral_analysis/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve used the collected data from &lt;a href=&#34;https://github.com/amirhosein-mesbah/NeuroScience/tree/main/Psychopy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Psychopy Task&lt;/a&gt;, and several analyses have been done on this data.&lt;/p&gt;
+&lt;h2 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Correcting Column names&lt;/li&gt;
+&lt;li&gt;scaling reaction times&lt;/li&gt;
+&lt;li&gt;handling NaN values&lt;/li&gt;
+&lt;li&gt;removing outliers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exploring-the-data&#34;&gt;Exploring the Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;looking for correlation and relation of each pair of features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prediction-of-behavioral-characteristics&#34;&gt;Prediction of Behavioral Characteristics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;looking any relation between &lt;code&gt;reaction time&lt;/code&gt; and other features&lt;/li&gt;
+&lt;li&gt;looking any relation between &lt;code&gt;accuracy&lt;/code&gt; and other features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;psychometric-fitting&#34;&gt;Psychometric Fitting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fit psychometic functions for &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;visual field&lt;/code&gt; and &lt;code&gt;Eccentricity&lt;/code&gt; as a variable&lt;br&gt;
+psychometic function for location of one of the subjects is shown below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-psychometic&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;psychometic&#34; srcset=&#34;
+               /project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_d72a1f0c4dde9ddad971aecb2d925673.webp 400w,
+               /project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_8eca7d1169b95d604854e919769e8fbd.webp 760w,
+               /project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/behavioral_analysis/8101004201_hu01e4e3b8427e77880b3999b929469eef_710335_d72a1f0c4dde9ddad971aecb2d925673.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;518&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      psychometic
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;spread-of-pses&#34;&gt;Spread of PSEs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Statistical Test to check if PSEs for different &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;visual field&lt;/code&gt; and &lt;code&gt;Eccentricity&lt;/code&gt; are independent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reaction-time-correlation-to-choice-complexity&#34;&gt;Reaction Time Correlation to Choice Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the relationship between &lt;code&gt;reaction time&lt;/code&gt; and &lt;code&gt;handness&lt;/code&gt; of each subject&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;representational-similarity-analysis-rsa&#34;&gt;Representational Similarity Analysis (RSA)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;check similarity of PSEs for &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;visual field&lt;/code&gt; and &lt;code&gt;Eccentricity&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RSA for `location is shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-location-rsa&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;location RSA&#34; srcset=&#34;
+               /project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_80d7dfdbe1615d53be53a69762b4317b.webp 400w,
+               /project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_2c0c83811e53b12135799761e05ad6b4.webp 760w,
+               /project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/behavioral_analysis/location_RSA_huc735cd518edd7e0fca243bc625698b2d_172194_80d7dfdbe1615d53be53a69762b4317b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;575&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      location RSA
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building a data pipeline on the Crypto market</title>
+      <link>https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/</guid>
+      <description>&lt;p&gt;In this project, I implemented a real-time data pipeline for crypto information and news about crypto which is crawled from &lt;a href=&#34;https://www.tgju.org/crypto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this website&lt;/a&gt;.
+I&amp;rsquo;ve used docker for running bigdata tools like HDFS, airflow, Kafka, Elasticsearch and Kibana on a virtual container flow of data in this pipeline is shown in the below image&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-flow-of-data&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;flow of data&#34; srcset=&#34;
+               /project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_59e933614771e2f99f722dec0957d3e1.webp 400w,
+               /project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_e1465560fc672eecbbe1c1c954522093.webp 760w,
+               /project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/pipeline_hu681e4098c2e696fe21b21efc93cfb0ca_66829_59e933614771e2f99f722dec0957d3e1.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;384&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      flow of data
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;This Project contains three main Parts:&lt;/p&gt;
+&lt;h2 id=&#34;part1&#34;&gt;Part1:&lt;/h2&gt;
+&lt;p&gt;In this Part, with the help of Apache Airflow, I crawled news and information about each crypto in defined time intervals. after preprocessing and cleaning downloaded data for each time interval, I designed an other dag in airflow for merging data of multiple intervals and saving them in HDFS, and also entering the data into the Kafka channel.&lt;/p&gt;
+&lt;h2 id=&#34;part2&#34;&gt;Part2:&lt;/h2&gt;
+&lt;p&gt;All of Part 2 was about Apache Kafka. In this part, we have 3 different Kafka channels with their own producers and consumers. The channels are as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data channel: data is written in this channel by airflow.&lt;/li&gt;
+&lt;li&gt;Preprocess channel: data cleaning is done in this channel and data is sent to elasticsearch.&lt;/li&gt;
+&lt;li&gt;Statics channel: future statics analysis is done in this channel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;writing and reading data in Kafka is done by the &lt;code&gt;kafka-python&lt;/code&gt; library in python.&lt;/p&gt;
+&lt;h2 id=&#34;part-3&#34;&gt;Part 3&lt;/h2&gt;
+&lt;p&gt;Saving data in elastic search and visualizing statistics using Kibana were the goals of this part. After saving data in Elasticsearch by &lt;code&gt;elastticsearch&lt;/code&gt; library of python, I applied several visualization graphs with the help of Kibana and finally use them to design a live dashboard in Kibana. The dashboarded is in Persian language due to Persian data and is shown in the below image&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-dashboard&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;dashboard&#34; srcset=&#34;
+               /project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_29d3eb81feebdd340de61af34d2a181b.webp 400w,
+               /project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_9ed2d58985fe22bd5b935dc59f6d434e.webp 760w,
+               /project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/realtime_data_pipeline/panel_hu6adf45fe7010e6be49a960791604087e_133533_29d3eb81feebdd340de61af34d2a181b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      dashboard
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Crowed Counting with Deep Learning</title>
+      <link>https://amirhosein-mesbah.github.io/project/crowd_counting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/crowd_counting/</guid>
+      <description>&lt;p&gt;Crowd counting or crowd estimating is a technique used to count or estimate the number of people in a crowd &lt;a href=&#34;https://en.wikipedia.org/wiki/Crowd_counting&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Wikipedia)&lt;/a&gt;.
+Nowadays with help of Deep Learning, we can do this task with neural networks from an image. In this project I implemented model of paper entitled &amp;ldquo;Towards Perspective-Free Object Counting with Deep Learning&amp;rdquo; by Daniel O˜noro-Rubio et al.&lt;/p&gt;
+&lt;h2 id=&#34;preprocess&#34;&gt;Preprocess:&lt;/h2&gt;
+&lt;p&gt;after resizing and rescaling the coordinates of each point in the image and applyin a gussain filter in each coordination, the data is ready for training a neural network.
+below is a sample of training data:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-train-data-sample&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;training sample&#34; srcset=&#34;
+               /project/crowd_counting/train_image_hua780c14419e9ac8a2719e1db32c70643_202700_a00e7fbe0ed7d3141ca647ecc216a3ed.webp 400w,
+               /project/crowd_counting/train_image_hua780c14419e9ac8a2719e1db32c70643_202700_552be5fdcb1cf0a1b2eed07864fee704.webp 760w,
+               /project/crowd_counting/train_image_hua780c14419e9ac8a2719e1db32c70643_202700_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/crowd_counting/train_image_hua780c14419e9ac8a2719e1db32c70643_202700_a00e7fbe0ed7d3141ca647ecc216a3ed.webp&#34;
+               width=&#34;710&#34;
+               height=&#34;351&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      train data sample
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I use ADAM Optimizer for training network and power 2 of norm1 distatnce as loss function.&lt;/li&gt;
+&lt;li&gt;Due to the small amount of data, augmentation methods have also been used to increase the data.
+The process of changing the value of the Loss function is available below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-loss-of-network-during-training&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;loss function during training&#34; srcset=&#34;
+               /project/crowd_counting/loss_huf3c438a8fc938864337798df74a9494e_12003_5f24407a24ba3f6a289649dda97798cf.webp 400w,
+               /project/crowd_counting/loss_huf3c438a8fc938864337798df74a9494e_12003_2e5506545f961ad62e0e6ebc4e75b163.webp 760w,
+               /project/crowd_counting/loss_huf3c438a8fc938864337798df74a9494e_12003_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/crowd_counting/loss_huf3c438a8fc938864337798df74a9494e_12003_5f24407a24ba3f6a289649dda97798cf.webp&#34;
+               width=&#34;384&#34;
+               height=&#34;278&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      loss of network during training
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Below is the result of traning proposed network with data augmentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-output-of-network&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;output with augmentation&#34; srcset=&#34;
+               /project/crowd_counting/output_huafcffbd99e8984ed57e5d4cdcf47d41c_841059_6523a97e1247c8c6a1b2c3f795239d83.webp 400w,
+               /project/crowd_counting/output_huafcffbd99e8984ed57e5d4cdcf47d41c_841059_57718045f45b405b0828a89a27857bf8.webp 760w,
+               /project/crowd_counting/output_huafcffbd99e8984ed57e5d4cdcf47d41c_841059_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/crowd_counting/output_huafcffbd99e8984ed57e5d4cdcf47d41c_841059_6523a97e1247c8c6a1b2c3f795239d83.webp&#34;
+               width=&#34;703&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      output of network
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Detecting Parkinson disease using signals of speech data with ensemble learning</title>
+      <link>https://amirhosein-mesbah.github.io/project/parkinson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/parkinson/</guid>
+      <description>&lt;h2 id=&#34;decription&#34;&gt;Decription:&lt;/h2&gt;
+&lt;p&gt;This Project is a group work with &lt;a href=&#34;https://github.com/zaha2020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zahra Habibzadeh&lt;/a&gt;. in this project we used signals of speech data for a binary classification task to check if the person to whom the sound belongs has Parkinson&amp;rsquo;s disease or not.&lt;/p&gt;
+&lt;p&gt;The data used in this project is related to an article with the following title from Jefferson S.Almeida et al:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Detecting Parkinson’s disease with sustained phonation and speech signals using
+machine learning techniques&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;We implemented the methods used in this paper for data preprocessing, dimensionality reduction and model training. Also, in addition to these cases, we also used ensemble models for training and better performance.&lt;/p&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result:&lt;/h2&gt;
+&lt;p&gt;The best performance was related to the ensemble model using KNN algorithm, whose accuracy was equal to 96,10%. The results of the rest of the models are available in the table below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Algorithms&lt;/th&gt;
+&lt;th&gt;Accuracy%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Logistic regression&lt;/td&gt;
+&lt;td&gt;87,23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SVM&lt;/td&gt;
+&lt;td&gt;93,97&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Decision Tree&lt;/td&gt;
+&lt;td&gt;84,04&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;KNN(K=1)&lt;/td&gt;
+&lt;td&gt;94,33&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MLP&lt;/td&gt;
+&lt;td&gt;91,84&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RBF&lt;/td&gt;
+&lt;td&gt;93,26&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ensemble&lt;/td&gt;
+&lt;td&gt;96,10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Federated Learning on Semantic Segmentation task (FedAVG, FedADMM)</title>
+      <link>https://amirhosein-mesbah.github.io/project/federated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/federated/</guid>
+      <description>&lt;p&gt;Federated Learning is one of the new eras of Deep Learning whose aim is to train a global Network with respect to private local networks. Leaning on smartphones and medical tasks are some of the important applications of Federated learning.&lt;/p&gt;
+&lt;p&gt;In this Project, I&amp;rsquo;ve used federated learning for Image segmentation of Autonomous Driving cars data. We can consider a network of each car as a private and local network and we want to train a global network to be robust against perturbations.
+This project is a Pytorch Implementation of two papers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;FEDERATED OPTIMIZATION IN HETEROGENEOUS NETWORKS&amp;rdquo; by  Tian Li et al introduces the FedADMM algorithm for aggregation of weights of local networks&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Communication-Efficient Learning of Deep Networks from Decentralized Data&amp;rdquo; by H. Brendan McMahan et al introduces Federate learning for the first time and uses the average aggregation method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve divided Camvid Dataset which is a famous dataset for segmentation, for each local network and local networks datasets are Non-IID.&lt;/p&gt;
+&lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
+&lt;p&gt;For the segmentation task, I&amp;rsquo;ve used SegNet. we have multiple local SegNet Networks for each Autonomous car and a Global Network for Aggregating weights of local networks. All of the Networks have the same Architecture.&lt;/p&gt;
+&lt;p&gt;Below Loss function of Both Aggregation methods are shown:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loss function of Average Aggregation during communication rounds for 3 local networks and one global network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-loss&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;average loss&#34; srcset=&#34;
+               /project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_d4a58bc613567db3c161be982a629922.webp 400w,
+               /project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_2b61b48c8a2a5a93b5bae83f17b33fe2.webp 760w,
+               /project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/federated/loss_primal_3local_hu7b58ba14f5f9a8ec47fb82e496f972e5_19333_d4a58bc613567db3c161be982a629922.webp&#34;
+               width=&#34;461&#34;
+               height=&#34;333&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      average loss
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loss function of ADMM Aggregation (FedADMM) during communication rounds for 2 local networks and one global network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-admm-loss&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;admm loss&#34; srcset=&#34;
+               /project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_19a30bcbd1fa4f7d958b6d47a3393a31.webp 400w,
+               /project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_680cd78e3066958bcef4bcfacab68b33.webp 760w,
+               /project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/federated/loss_admm_2local_huae9885f67e8b8f102618cb36410bf03c_18810_19a30bcbd1fa4f7d958b6d47a3393a31.webp&#34;
+               width=&#34;459&#34;
+               height=&#34;324&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      admm loss
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Some of the segmented images with the fedADMM aggregation are in blew figure, we can see that this method works as well as &lt;a href=&#34;https://github.com/amirhosein-mesbah/Deep_Learning/tree/main/Image_Segmentation_SegNet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;centralized training of segnet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-output-admm&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;output admm&#34; srcset=&#34;
+               /project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_874dc3389cb12696632ca72bca978ff0.webp 400w,
+               /project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_75a3a74700d173bf7d8abbffed196022.webp 760w,
+               /project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/federated/output_admm_hu5a54b463f4605e2533dbc6d64e77485e_141560_874dc3389cb12696632ca72bca978ff0.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;715&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      output admm
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Generative Cooperative Network</title>
+      <link>https://amirhosein-mesbah.github.io/project/gcn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/gcn/</guid>
+      <description>&lt;p&gt;An implementation of the paper entitled &lt;a href=&#34;https://arxiv.org/abs/1705.02887&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Generative Cooperative Net for Image Generation and Data Augmentation&amp;rdquo;&lt;/a&gt; by Qiangeng Xu et al, as a part of the final project for the course Deep Learning at the spring semester of 2021, University of Tehran.&lt;/p&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;DataSet&lt;/h2&gt;
+&lt;p&gt;In this project we&amp;rsquo;ve use two different datasets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kdef.se/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Karolinska Directed Emotional Faces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/qmnist&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;QMNIST&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;goals&#34;&gt;Goals&lt;/h2&gt;
+&lt;p&gt;This projects goal is to build a neural network to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generat images of faces (for KDEF dataset)&lt;/li&gt;
+&lt;li&gt;Generat images of hadwritten number (for QMNIST dataset)&lt;/li&gt;
+&lt;li&gt;Create a new augmentation tool: After training the GCN network and combining the identity features of two people with a ratio of 0.5, new images can be produced&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;With respect to different goals of hour network we train it on two different datasets as mentioned above. The input of networ for these datasets is different.&lt;/p&gt;
+&lt;h3 id=&#34;input-of-network-for-kdef-dataset&#34;&gt;Input of Network for KDEF dataset&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a one-hot encoded vector for identity of the image (with length of 70)&lt;/li&gt;
+&lt;li&gt;a one-hot encoded vector for face expression of the image (with length of 4)&lt;/li&gt;
+&lt;li&gt;a one-hot encoded vector for transformation of the number (with length of 8)&lt;/li&gt;
+&lt;li&gt;an image with size of 28*28&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;input-of-network-for-kdef-dataset-1&#34;&gt;Input of Network for KDEF dataset&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;a one-hot encoded vector for number of the image (with length of 10)&lt;/li&gt;
+&lt;li&gt;a one-hot encoded vector for color the number (with length of 3 for R, G and B)&lt;/li&gt;
+&lt;li&gt;a one-hot encoded vector for transformation of the image (with length of 8)&lt;/li&gt;
+&lt;li&gt;an image with size of 158*158&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
+&lt;p&gt;Our proposed model has two modules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generator: generate image with an MSE loss&lt;/li&gt;
+&lt;li&gt;Classifier: classifies the generated image of generator.
+In this structure, the generator and the classifier have goals in the same direction and they are trying to increase the quality of the produced images by working together. The Architecture of model is shown below&lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-model&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;GCN architecture&#34; srcset=&#34;
+               /project/gcn/model_hu1a6dc2d237455e4713dcdea1837cd099_177771_b2fe513d8f20bafb232361442fde3310.webp 400w,
+               /project/gcn/model_hu1a6dc2d237455e4713dcdea1837cd099_177771_0f7a4768618fc35c0eb41da0eb55cd78.webp 760w,
+               /project/gcn/model_hu1a6dc2d237455e4713dcdea1837cd099_177771_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/gcn/model_hu1a6dc2d237455e4713dcdea1837cd099_177771_b2fe513d8f20bafb232361442fde3310.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;578&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      model
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Here we have the results for our metioned tasks. right column of each image is model output.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Generating images of faces (for KDEF dataset)&lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-model-output-faces&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;faces output&#34; srcset=&#34;
+               /project/gcn/output_faces_hu8a3c0fa6011c8f93ae444c7a73f6bf7f_34589_95148570b04cd0c0b93b4985c3823b50.webp 400w,
+               /project/gcn/output_faces_hu8a3c0fa6011c8f93ae444c7a73f6bf7f_34589_42a3d102582563ab6e2e2923716d1fb9.webp 760w,
+               /project/gcn/output_faces_hu8a3c0fa6011c8f93ae444c7a73f6bf7f_34589_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/gcn/output_faces_hu8a3c0fa6011c8f93ae444c7a73f6bf7f_34589_95148570b04cd0c0b93b4985c3823b50.webp&#34;
+               width=&#34;257&#34;
+               height=&#34;515&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      model output faces
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generating images of handwritten numbers (for QMNIST dataset)&lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-model-output-numbers&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;numbers output&#34; srcset=&#34;
+               /project/gcn/output_numbers_hu5f08c8bd33bef3ec9d11e2f40e8f8985_15699_a4d15afa539e8529b5b366e87e5508ac.webp 400w,
+               /project/gcn/output_numbers_hu5f08c8bd33bef3ec9d11e2f40e8f8985_15699_dd8819f0d517da154d2341780a1a7a3f.webp 760w,
+               /project/gcn/output_numbers_hu5f08c8bd33bef3ec9d11e2f40e8f8985_15699_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/gcn/output_numbers_hu5f08c8bd33bef3ec9d11e2f40e8f8985_15699_a4d15afa539e8529b5b366e87e5508ac.webp&#34;
+               width=&#34;215&#34;
+               height=&#34;427&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      model output numbers
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a new augmentation tool&lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-model-output-augmentation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;augmentations output&#34; srcset=&#34;
+               /project/gcn/output_Augmentation_huca2562860e0620ce714b6053ec9b8f2a_86894_fd5e416d816009b1d45d21ae4e2a2dd9.webp 400w,
+               /project/gcn/output_Augmentation_huca2562860e0620ce714b6053ec9b8f2a_86894_8f1528af88c4861d83870512a2147bd0.webp 760w,
+               /project/gcn/output_Augmentation_huca2562860e0620ce714b6053ec9b8f2a_86894_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/gcn/output_Augmentation_huca2562860e0620ce714b6053ec9b8f2a_86894_fd5e416d816009b1d45d21ae4e2a2dd9.webp&#34;
+               width=&#34;555&#34;
+               height=&#34;744&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      model output augmentation
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;team-members&#34;&gt;Team Members&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/FeryET&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Farhood Etaati&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/amirhosein-mesbah&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amir Mesbah&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Image Captioning</title>
+      <link>https://amirhosein-mesbah.github.io/project/image_captioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/image_captioning/</guid>
+      <description>&lt;p&gt;Image Captioning is one of the most fantastic applications of Deep Learning which uses multi-modal data (image and text) to generate captions for each given image. In This project, I use PyTorch to implement an image captioning task using ResNet Network architecture for creating embeddings for images and LSTMs for generating captions for each image.
+This project is an implementation of paper entitled &amp;ldquo;image captioning&amp;rdquo; by Vikram Mullachery et al.&lt;/p&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;DataSet&lt;/h2&gt;
+&lt;p&gt;In this project I&amp;rsquo;ve used &amp;lsquo;flickr8k&amp;rsquo; dataset for training and evaluation of the network.&lt;/p&gt;
+&lt;h2 id=&#34;preprocessing&#34;&gt;PreProcessing&lt;/h2&gt;
+&lt;p&gt;multiple methods applied on dataset to preprocess the dataset are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resizeing and Normalization of images&lt;/li&gt;
+&lt;li&gt;Creating Dictioanry with respect to captions of each image
+two training data samples are shown below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-training-sample-1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;training sample 1&#34; srcset=&#34;
+               /project/image_captioning/assets/train_exp1_hu3196278f64c615e8a122e8e6c8115ea1_31751_2d417078942798e81863add2539de63d.webp 400w,
+               /project/image_captioning/assets/train_exp1_hu3196278f64c615e8a122e8e6c8115ea1_31751_15b484932acc828b1edc2c46a607de64.webp 760w,
+               /project/image_captioning/assets/train_exp1_hu3196278f64c615e8a122e8e6c8115ea1_31751_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/image_captioning/assets/train_exp1_hu3196278f64c615e8a122e8e6c8115ea1_31751_2d417078942798e81863add2539de63d.webp&#34;
+               width=&#34;586&#34;
+               height=&#34;313&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      training sample 1
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-training-sample-2&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;training sample 2&#34; srcset=&#34;
+               /project/image_captioning/assets/train_exp2_hu23c247bc80388d4c6ba93e14535f9a49_26423_3796736071dbac38d258ca17c9b2ed6e.webp 400w,
+               /project/image_captioning/assets/train_exp2_hu23c247bc80388d4c6ba93e14535f9a49_26423_495ec05e3afaf89f7e0f48cfd401bbfa.webp 760w,
+               /project/image_captioning/assets/train_exp2_hu23c247bc80388d4c6ba93e14535f9a49_26423_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/image_captioning/assets/train_exp2_hu23c247bc80388d4c6ba93e14535f9a49_26423_3796736071dbac38d258ca17c9b2ed6e.webp&#34;
+               width=&#34;328&#34;
+               height=&#34;311&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      training sample 2
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;I consider three different architectures and conditions for training:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;freezed ResNet (except last layer) for generating image embeddings (transfer learning and fine tuning) and LSTM for Caption generation&lt;/li&gt;
+&lt;li&gt;Unfreezed Resnet and LSTM for Caption generation&lt;/li&gt;
+&lt;li&gt;Bi-LSTM for Caption generation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;loss function of these three configurations are shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-loss-during-training&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;loss function&#34; srcset=&#34;
+               /project/image_captioning/assets/loss_hu79da5286b76a7d28dca431a348357d83_19078_aaff460091935ec63b931537a08858af.webp 400w,
+               /project/image_captioning/assets/loss_hu79da5286b76a7d28dca431a348357d83_19078_28216f9d09da4ec715067efaf118e4e1.webp 760w,
+               /project/image_captioning/assets/loss_hu79da5286b76a7d28dca431a348357d83_19078_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/image_captioning/assets/loss_hu79da5286b76a7d28dca431a348357d83_19078_aaff460091935ec63b931537a08858af.webp&#34;
+               width=&#34;453&#34;
+               height=&#34;308&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      loss during training
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;some results for the second configuration (Unfreezed ResNet) are shown below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-output-1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;output 1&#34; srcset=&#34;
+               /project/image_captioning/assets/output1_hu874ab75de89ba620cd23589dd6241c3f_34090_ffcdc98cb0f9c7079bbd0cd872293d42.webp 400w,
+               /project/image_captioning/assets/output1_hu874ab75de89ba620cd23589dd6241c3f_34090_1df16a028dfbf5fb0378c297dd9f9868.webp 760w,
+               /project/image_captioning/assets/output1_hu874ab75de89ba620cd23589dd6241c3f_34090_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/image_captioning/assets/output1_hu874ab75de89ba620cd23589dd6241c3f_34090_ffcdc98cb0f9c7079bbd0cd872293d42.webp&#34;
+               width=&#34;486&#34;
+               height=&#34;330&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      output 1
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-output-2&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;output 2&#34; srcset=&#34;
+               /project/image_captioning/assets/output2_huc30f7db3c113677c7cc78c97701df8b5_35584_25155dbdbbd8769875ee9b61bf656af3.webp 400w,
+               /project/image_captioning/assets/output2_huc30f7db3c113677c7cc78c97701df8b5_35584_a52a6daae8bd6557274f5fcc97fb092a.webp 760w,
+               /project/image_captioning/assets/output2_huc30f7db3c113677c7cc78c97701df8b5_35584_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/image_captioning/assets/output2_huc30f7db3c113677c7cc78c97701df8b5_35584_25155dbdbbd8769875ee9b61bf656af3.webp&#34;
+               width=&#34;556&#34;
+               height=&#34;327&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      output 2
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-output-3&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;output 3&#34; srcset=&#34;
+               /project/image_captioning/assets/output3_hu9065f1ca0b9c0fcef6c3031499d89516_47282_239c155f1ca14c89193419be854d3cac.webp 400w,
+               /project/image_captioning/assets/output3_hu9065f1ca0b9c0fcef6c3031499d89516_47282_dedf8d0d2c511757f5f4a455585747cc.webp 760w,
+               /project/image_captioning/assets/output3_hu9065f1ca0b9c0fcef6c3031499d89516_47282_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/image_captioning/assets/output3_hu9065f1ca0b9c0fcef6c3031499d89516_47282_239c155f1ca14c89193419be854d3cac.webp&#34;
+               width=&#34;509&#34;
+               height=&#34;329&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      output 3
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Implementing multiple Neural Dynamic models of single cell and population models</title>
+      <link>https://amirhosein-mesbah.github.io/project/neural_dynamics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/neural_dynamics/</guid>
+      <description>&lt;p&gt;In this Prject, I&amp;rsquo;ve implemented several models of Neural Dynamic models of single cell and population models with python.&lt;/p&gt;
+&lt;h2 id=&#34;hodgkinhuxley-model&#34;&gt;Hodgkin–Huxley model&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://doi.org/10.1146/annurev.ph.12.030150.002151&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hodgkin–Huxley model&lt;/a&gt; is one of the most recognized models in computational neuroscience. Describing the propagation of an action potential along the squid’s giant axon, the HH model states that the axon carries three ionic currents&lt;/p&gt;
+&lt;h2 id=&#34;leaky-integrate-and-fire&#34;&gt;leaky-integrate-and-fire&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://linkinghub.elsevier.com/retrieve/pii/S0361923099001616&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The leaky integrate and fire model&lt;/a&gt; which can be traced back to Louis Lapicque, is an idealization of a neuron having ohmic leakage current and a number of voltage-gated currents that are completely deactivated at rest.&lt;/p&gt;
+&lt;h2 id=&#34;morris-lecar&#34;&gt;Morris-Lecar&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://linkinghub.elsevier.com/retrieve/pii/S0006349581847820&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Morris-Lecar model&lt;/a&gt; is a two-dimensional &amp;ldquo;reduced&amp;rdquo; excitation model applicable to systems having two noninactivating voltage-sensitive conductances (one voltage variable and one gating variable). The original form of the model employed an instantaneously responding voltage-sensitive $Ca^{2+}$ conductance for excitation and a delayed voltage-dependent $K^{+}$ conductance for recovery. The model has three channels: a potassium channel, a leak, and a calcium channel. In the simplest version of the model, the calcium current depends instantaneously on the voltage.&lt;/p&gt;
+&lt;h2 id=&#34;wilson-cowan&#34;&gt;Wilson-Cowan&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://linkinghub.elsevier.com/retrieve/pii/S0006349572860685&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Wilson-Cowan model&lt;/a&gt; is a powerful yet simple model that describes the interactions between two populations of excitatory and inhibitory neurons. This model is capable of analyzing neural hysteresis phenomena related to binocular vision and is used as a canonical model of visual cortical activity.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Investigating the role of Imitation and Emulation in Decision Making</title>
+      <link>https://amirhosein-mesbah.github.io/project/imitation_emulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/imitation_emulation/</guid>
+      <description>&lt;p&gt;This Project is a Python Implementation of a paper entitled &amp;ldquo;A Neuro‑computational Account of Arbitration between Choice Imitation and Goal Emulation during Human Observational Learning” by Caroline J. Charpentier et al.
+Data of participants in the task is provided by the authors. I used this data to Implement the models that are introduced in the paper to investigate the role of Imitation and emulation in our Daily Decision Making.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;After Implementing the models of paper, the results are as shown in the table below&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Class&lt;/th&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Out of Sample Accuracy%&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation Inference&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;49,62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation Inference&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Imitation RL&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;51,37&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Imitation RL&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;53,88&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation RL&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;52,16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emulation RL&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;52,63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Arbitration&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;54,63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Arbitration&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Due to the results best model is Arbitration model.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Machine translation with transformers (English to Persian)</title>
+      <link>https://amirhosein-mesbah.github.io/project/machine_translation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/machine_translation/</guid>
+      <description>&lt;p&gt;Machine Translation using Deep Learning is one of the popular tasks in NLP. With the introduction of Transformers by Google this kind of tasks entered a new era.
+This project is a Pytorch Implementation of &amp;ldquo;Attention is all you need&amp;rdquo; Paper by Ashish Vaswani et al. The Encoder Module is implemented from Scratch and the Decoder module is the decoder of pytorch.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-model&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;attention is all you need&#34; srcset=&#34;
+               /project/machine_translation/attention_hu457d9d51ee390d5e5c464856953fb4a7_80011_79a24b57597d24b9f0336ccaf7752ed8.webp 400w,
+               /project/machine_translation/attention_hu457d9d51ee390d5e5c464856953fb4a7_80011_485edc77016f9839f43699a789f6015c.webp 760w,
+               /project/machine_translation/attention_hu457d9d51ee390d5e5c464856953fb4a7_80011_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/machine_translation/attention_hu457d9d51ee390d5e5c464856953fb4a7_80011_79a24b57597d24b9f0336ccaf7752ed8.webp&#34;
+               width=&#34;549&#34;
+               height=&#34;713&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      model
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;p&gt;In this project I use the dataset of &lt;a href=&#34;https://visionlab.ut.ac.ir/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computational Audio-Vision Lab&lt;/a&gt; for training model.&lt;/p&gt;
+&lt;h2 id=&#34;preprocession&#34;&gt;PreProcession&lt;/h2&gt;
+&lt;p&gt;Several preprocessing is applied to clean data and make it ready for training like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;creating dictionary&lt;/li&gt;
+&lt;li&gt;removing infrequent tokens&lt;/li&gt;
+&lt;li&gt;adding tokens like &lt;SOS&gt;, &lt;EOF&gt;, &lt;PAD&gt;&lt;/li&gt;
+&lt;li&gt;handleing persian unicodes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and also I use two different methods for tokenization:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tokenizing with NLTK and regex&lt;/li&gt;
+&lt;li&gt;Byte Pair Encoding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve used a model with 3 layers of encoder and 3 layers of decoder to train a translator! and also i need to mention that we have 3 kinds of models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;model with NLTK Tokenizer without with layer normalization&lt;/li&gt;
+&lt;li&gt;model with Byte Pair Encoding withiut with layer normalization&lt;/li&gt;
+&lt;li&gt;model with layer normalization and NLTK tokenizer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;after 8 hours training the results of the mean NIST and mean Blue Score for first (best) model is given in the table below:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Mean corpus Blue score&lt;/th&gt;
+&lt;th&gt;Mean corpus NIST score&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;14,63%&lt;/td&gt;
+&lt;td&gt;1,95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Also some translation examples (from English to Persian) is shown in the below table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;English&lt;/th&gt;
+&lt;th&gt;Persian (translation of model)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;hello , do we drive together to Hanover on the twenty-eighth of March ?&lt;/td&gt;
+&lt;td&gt;سلام . ما در مارس با یکدیگر به هانوور حرکت خواهیم کرد ?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;it is more comfortable by train .&lt;/td&gt;
+&lt;td&gt;قطار راحت تر است&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;a good idea . then we will meet at the airport tomorrow .&lt;/td&gt;
+&lt;td&gt;پس فردا همدیگر را در فرودگاه ملاقات خواهیم کرد&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;what is planned for the evening ?&lt;/td&gt;
+&lt;td&gt;برنامه ریزی برای عصر چیست ?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;in any case a cheap hotel .&lt;/td&gt;
+&lt;td&gt;در هر صورت ارزان قیمت در هر صورت ارزان .&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;I prefer the plane .&lt;/td&gt;
+&lt;td&gt;من هواپیما را ترجیح میدهم .&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multi-Agent Deep Reinforcement Learning for Fighting Forest Fires</title>
+      <link>https://amirhosein-mesbah.github.io/project/multi_agent_rl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/multi_agent_rl/</guid>
+      <description>&lt;p&gt;In this Project, we Implement a Forest Environment which in fires take place and our agents&amp;rsquo; goal is to stop the fire and save the forest. This Implementation is s part of the final project for the course Interactive Learning in the Autumn semester of 2022, University of Tehran.&lt;/p&gt;
+&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-environemnt&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Environemnt&#34;
+           src=&#34;https://amirhosein-mesbah.github.io/project/multi_agent_rl/env.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Environemnt
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Elements of Environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Forest: Green Area&lt;/li&gt;
+&lt;li&gt;Areas without Tree: Brown Area&lt;/li&gt;
+&lt;li&gt;Burnt forest: Black Area&lt;/li&gt;
+&lt;li&gt;Drone Agents: Purple Squares&lt;/li&gt;
+&lt;li&gt;Fire: Red Squares&lt;/li&gt;
+&lt;li&gt;Houses: Blue Square&lt;/li&gt;
+&lt;li&gt;Station of Drones: Yellow Square&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this environment, the fire spreads according to the wind and the defined probability of transition, and the task of the agents is to prevent the spread of fire by working together. One of the challenging problems of this environment is that it is non-stationary.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;Each Agent is training with a Double-DQN and agents have the ability to communicate with each other in a certain environmental range for better coordination with a level of hierarchy in swarm intelligence.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Due to a Shortage of Computational power, we succeed to train the agents for just four hours. One of the test episodes after training is shown in the video below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-run&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Run&#34;
+           src=&#34;https://amirhosein-mesbah.github.io/project/multi_agent_rl/run.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Run
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;team-members&#34;&gt;Team members:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/BanafshehKarimian&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Banafsheh Karimian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/erfunmirzaei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Erfan Mirzaei&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Network routing with multi-armed bandit algorithms</title>
+      <link>https://amirhosein-mesbah.github.io/project/routing_bandits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/routing_bandits/</guid>
+      <description>&lt;p&gt;In this Project I&amp;rsquo;ve used Bandit Algorithms to solve the Problem of Routing for the graph below:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-network-graph&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Network Graph&#34; srcset=&#34;
+               /project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_1fb01158296b78920b3e56d0180263fd.webp 400w,
+               /project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_4da833e3595a19ba1f49b0ca5e157bb5.webp 760w,
+               /project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/routing_bandits/Network_huebb9620c72c01ecaa462144dd86e000c_75381_1fb01158296b78920b3e56d0180263fd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;386&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Network Graph
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;algorithms&#34;&gt;Algorithms:&lt;/h2&gt;
+&lt;p&gt;For solving this task I&amp;rsquo;ve used different algorithms for multi-armed bandit problems like UCB and Epsilon-Greedy. each route in the network is considered an arm for a multi-armed bandit and each arm has its own stochastic reward due to the delays that may occur during the route.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Below you can see the average reward for the epsilon greedy algorithm and the percentage of optimal action selection for UCB and epsilon greedy algorithms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the average reward for epsilon greedy algorithm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-average-reward-for-epsilon-greedy&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;average reward for epsilon greedy&#34; srcset=&#34;
+               /project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_e5e80e2ba622642551eaf33e529a5103.webp 400w,
+               /project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_f717409e71efbc6a1fc88310e20a9492.webp 760w,
+               /project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/routing_bandits/average_reward_epsilon_hud66314a46532f6c1a55da4dded7f1d4e_56721_e5e80e2ba622642551eaf33e529a5103.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;412&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      average reward for epsilon greedy
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the percentage of optimal action selection for UCB and epsilon greedy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-optimal-action-selection&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Optimal action selection&#34; srcset=&#34;
+               /project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_ab34479c8b3de9540df35e7d4fddcd6c.webp 400w,
+               /project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_cc605a44e896d6c0f31631fc3351c39c.webp 760w,
+               /project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/routing_bandits/optimal_action_hu163d60fdddd769abafdb38ab72db4be4_74012_ab34479c8b3de9540df35e7d4fddcd6c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;426&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Optimal action selection
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Relation Extraction Via Reccurent Neural Neworks</title>
+      <link>https://amirhosein-mesbah.github.io/project/relation_extraction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/relation_extraction/</guid>
+      <description>&lt;p&gt;This Project is an implementation of paper entilted &amp;ldquo;Relation Classification via Recurrent Neural Network&amp;rdquo; by Dongxu Zhang et al.
+I use pytorch for implementing this project. After Preprocessing text data and extracting labels for each datapoint, I use bi-LSTM Network with three different conditions to train the network.&lt;/p&gt;
+&lt;h2 id=&#34;preprocessing&#34;&gt;PreProcessing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;creating dictionary with respect to tokens&lt;/li&gt;
+&lt;li&gt;encoding labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;I use 3 Configurations for Training a bi-LSTM Network:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bi-LSTM using Glove Embeddings (pre-trained)&lt;/li&gt;
+&lt;li&gt;bi-LSTM using random initialized embedding&lt;/li&gt;
+&lt;li&gt;bi-LSTM using random initialized embedding with addition of max and average pooling layers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;loss and accuracy during training are shown below&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-loss&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;loss during training&#34; srcset=&#34;
+               /project/relation_extraction/loss_hu5a20a63dcc71d4ed20d7dbcd69651b28_18229_d5c37420876c7fecff27f1da578ad112.webp 400w,
+               /project/relation_extraction/loss_hu5a20a63dcc71d4ed20d7dbcd69651b28_18229_de1bf531b0653e70b3bc7fe4b0d7db66.webp 760w,
+               /project/relation_extraction/loss_hu5a20a63dcc71d4ed20d7dbcd69651b28_18229_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/relation_extraction/loss_hu5a20a63dcc71d4ed20d7dbcd69651b28_18229_d5c37420876c7fecff27f1da578ad112.webp&#34;
+               width=&#34;444&#34;
+               height=&#34;291&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      loss
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-accuracy&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;accuracy during training&#34; srcset=&#34;
+               /project/relation_extraction/accuracy_hu5e8ad6c87d82c0d5ad14fd017fae4419_19574_0e0bc64908b7ec449bdc1242ec8cd232.webp 400w,
+               /project/relation_extraction/accuracy_hu5e8ad6c87d82c0d5ad14fd017fae4419_19574_82917b1957a738492111b47a9e6ac85f.webp 760w,
+               /project/relation_extraction/accuracy_hu5e8ad6c87d82c0d5ad14fd017fae4419_19574_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/relation_extraction/accuracy_hu5e8ad6c87d82c0d5ad14fd017fae4419_19574_0e0bc64908b7ec449bdc1242ec8cd232.webp&#34;
+               width=&#34;439&#34;
+               height=&#34;294&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      accuracy
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;results&lt;/h2&gt;
+&lt;p&gt;the confusion matrix for third configuration on test data is shown below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-confusion-matrix&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;confusion matrix&#34; srcset=&#34;
+               /project/relation_extraction/confiusion_matrix_hu613a274ea686e2f8cbf1b414fb35f5a6_59505_1ec075a448bbb9e0b2bdface45a5b1de.webp 400w,
+               /project/relation_extraction/confiusion_matrix_hu613a274ea686e2f8cbf1b414fb35f5a6_59505_a7cd7f75cf70c7cf338099bd81364392.webp 760w,
+               /project/relation_extraction/confiusion_matrix_hu613a274ea686e2f8cbf1b414fb35f5a6_59505_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/relation_extraction/confiusion_matrix_hu613a274ea686e2f8cbf1b414fb35f5a6_59505_1ec075a448bbb9e0b2bdface45a5b1de.webp&#34;
+               width=&#34;712&#34;
+               height=&#34;669&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      confusion matrix
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Semantic segmentation with Segnet</title>
+      <link>https://amirhosein-mesbah.github.io/project/semantic_segmentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/semantic_segmentation/</guid>
+      <description>&lt;p&gt;Semantic Segmentation is one of the classic tasks of Computer vision and deep learning. in this project I&amp;rsquo;ve implemented SegNet. the Network which was introduced in the paper entitled &amp;ldquo;SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation&amp;rdquo; by Vijay Badrinarayanan et al.
+I&amp;rsquo;ve used Pytorch framework for this implementation.&lt;/p&gt;
+&lt;h2 id=&#34;preprocessing&#34;&gt;PreProcessing&lt;/h2&gt;
+&lt;p&gt;multiple preprocessing that has been done on images to be ready for training are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;resizing images&lt;/li&gt;
+&lt;li&gt;creating codecs (labels) for each pixels&lt;/li&gt;
+&lt;li&gt;one hot encoding for label of pixels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
+&lt;p&gt;after deviding data to 3 sets of train, validation and test, the SegNet Network is trained with proposed data for 2 cases (network with batch normalization and network without bach normalization. Amount of loss function during trainig is shown below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-loss-of-network-during-training&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;loss function during training&#34; srcset=&#34;
+               /project/semantic_segmentation/loss_hu7acf600f28989371971e3a0e3d4292f5_13875_f124bceb0c2f6f6bfebea3448a64c673.webp 400w,
+               /project/semantic_segmentation/loss_hu7acf600f28989371971e3a0e3d4292f5_13875_05012149ed8a7afffcc6a7e7d902c886.webp 760w,
+               /project/semantic_segmentation/loss_hu7acf600f28989371971e3a0e3d4292f5_13875_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/semantic_segmentation/loss_hu7acf600f28989371971e3a0e3d4292f5_13875_f124bceb0c2f6f6bfebea3448a64c673.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;278&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      loss of network during training
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;results for segmentation of test images for the network without batch normalization is shown below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-output-of-network-for-segmentation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;output of network&#34; srcset=&#34;
+               /project/semantic_segmentation/output_hu367af9f02ec142f6ad95ec81ff2cb7f4_1001182_f5929bdee708ee725b612e25f6586fd6.webp 400w,
+               /project/semantic_segmentation/output_hu367af9f02ec142f6ad95ec81ff2cb7f4_1001182_e1d70447a0b2a24442231a213a8acc50.webp 760w,
+               /project/semantic_segmentation/output_hu367af9f02ec142f6ad95ec81ff2cb7f4_1001182_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://amirhosein-mesbah.github.io/project/semantic_segmentation/output_hu367af9f02ec142f6ad95ec81ff2cb7f4_1001182_f5929bdee708ee725b612e25f6586fd6.webp&#34;
+               width=&#34;270&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      output of network for segmentation
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Apache Spark for NLP and Machine Learning tasks</title>
+      <link>https://amirhosein-mesbah.github.io/project/spark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/project/spark/</guid>
+      <description>&lt;p&gt;In this project, I&amp;rsquo;ve used Apache Spark for NLP and Machine Learning tasks.&lt;/p&gt;
+&lt;h2 id=&#34;spark-for-machine-learning&#34;&gt;Spark for Machine Learning&lt;/h2&gt;
+&lt;h3 id=&#34;model&#34;&gt;model&lt;/h3&gt;
+&lt;p&gt;In this Task, I&amp;rsquo;ve used &lt;code&gt;spark ML&lt;/code&gt; to build an mlp model and apply a multi-label classification on a `spark data frame. After Preprocessing Data and creating a column for labels, Standardization and PCA are applied to data respectfully.&lt;/p&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+&lt;p&gt;The results of training a mlp model on the proposed dataset are shown in the table below:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Test Accuracy&lt;/th&gt;
+&lt;th&gt;Test Recall&lt;/th&gt;
+&lt;th&gt;Test Precision&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MLP&lt;/td&gt;
+&lt;td&gt;96,01%&lt;/td&gt;
+&lt;td&gt;96,01%&lt;/td&gt;
+&lt;td&gt;92,19%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;spark-for-nlp&#34;&gt;Spark for NLP&lt;/h2&gt;
+&lt;p&gt;For this task, I downloaded the &lt;code&gt;Les Misérables&lt;/code&gt; book and created a &lt;code&gt;spark dataframe&lt;/code&gt; with sentences from the book. After that, I created the &lt;code&gt;bigram&lt;/code&gt; and &lt;code&gt;trigram&lt;/code&gt; of the prepared data frame and compute the count of each bigram and trigram.
+for the last part, I implemented a logistic regression to see if there is any relationship between the length of words in bigram or trigram.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

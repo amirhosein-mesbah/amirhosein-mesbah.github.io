@@ -1,0 +1,1434 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Amir Mesbah" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Implementing Distributed algorithms for multi agent Reinforcement Learning" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://amirhosein-mesbah.github.io/project/distributed_rl/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3495fc6150afdd177f1d04fbba9f5e2c.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://amirhosein-mesbah.github.io/project/distributed_rl/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@amirh_mesbah" />
+    <meta property="twitter:creator" content="@amirh_mesbah" />
+  
+  <meta property="og:site_name" content="Amir Mesbah" />
+  <meta property="og:url" content="https://amirhosein-mesbah.github.io/project/distributed_rl/" />
+  <meta property="og:title" content="Multi‑Agent Distributed Reinforcement Learning for grid Environment | Amir Mesbah" />
+  <meta property="og:description" content="Implementing Distributed algorithms for multi agent Reinforcement Learning" /><meta property="og:image" content="https://amirhosein-mesbah.github.io/project/distributed_rl/featured.jpg" />
+    <meta property="twitter:image" content="https://amirhosein-mesbah.github.io/project/distributed_rl/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-10-10T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-10-10T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://amirhosein-mesbah.github.io/project/distributed_rl/"
+  },
+  "headline": "Multi‑Agent Distributed Reinforcement Learning for grid Environment",
+  
+  "image": [
+    "https://amirhosein-mesbah.github.io/project/distributed_rl/featured.jpg"
+  ],
+  
+  "datePublished": "2021-10-10T00:00:00Z",
+  "dateModified": "2021-10-10T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Amir Mesbah"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Amirhossein Mesbah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amirhosein-mesbah.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Implementing Distributed algorithms for multi agent Reinforcement Learning"
+}
+</script>
+
+  
+
+  
+
+  
+
+
+  <title>Multi‑Agent Distributed Reinforcement Learning for grid Environment | Amir Mesbah</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="7681aaf5c20bb5647363612abb69eb50" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Amir Mesbah</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Amir Mesbah</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#experience"><span>Experience</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Multi‑Agent Distributed Reinforcement Learning for grid Environment</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 10, 2021
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/amirhosein-mesbah/Reinforcement_learning/tree/main/Distributed_RL" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 441px;">
+  <div style="position: relative">
+    <img src="/project/distributed_rl/featured_hu185505e99023e00eafa1bd7befeb9fe7_42138_720x2500_fit_q75_h2_lanczos.webp" width="720" height="441" alt="" class="featured-image">
+    <span class="article-header-caption">average reward for belief based algorithm</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>In this project, I&rsquo;ve Implemented a grid environment with 2 agents and 2 goal states. The agents have to learn to reach the goal states by receiving the maximum reward and avoiding obstacles.
+The environment is shown below</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-environment">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Environment" srcset="
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1416eb188f8010d11382567c7a21997a.webp 400w,
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_b77e239916ac960a35565eacba196935.webp 760w,
+               /project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/distributed_rl/Environment_hubcd5a9a33423a8dee93a0faad6a0d43c_25226_1416eb188f8010d11382567c7a21997a.webp"
+               width="464"
+               height="464"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Environment
+    </figcaption></figure>
+</p>
+<p>Elements of Environment:</p>
+<ul>
+<li>Agents: Blue Squares</li>
+<li>Obstacles: Red Squares</li>
+<li>Goal States: Green Squares</li>
+</ul>
+<h2 id="training">Training</h2>
+<p>After training each agent lonely with the sarsa algorithm, I implemented several distributed algorithms like:</p>
+<ul>
+<li>Distributed On-Policy algorithms like SARSA</li>
+<li>Min-Max Q-Learning</li>
+<li>Belief Based Algorithm</li>
+<li>Distributed Actor-Critic</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>The average Reward during the learning episodes for SARSA, Min-Max Q-Learning, and Belief-Based learning is shown Below:</p>
+<ul>
+<li>Average Reward during the learning episodes for SARSA</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-average-reward-for-sarsa">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Average reward for SARSA" srcset="
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_5ca3224f44a697bc6faab2ce805258bd.webp 400w,
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_2c1c0f683ec0cb3b5ceaa40c612af7cc.webp 760w,
+               /project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/distributed_rl/sarsa_hu023a754af80578ed896cd5c3cdcaa388_63204_5ca3224f44a697bc6faab2ce805258bd.webp"
+               width="760"
+               height="475"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Average reward for SARSA
+    </figcaption></figure>
+</p>
+<ul>
+<li>Average Reward during the learning episodes for SARSA</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-average-reward-for-distributed-sarsa">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Average reward for Distributed SARSA" srcset="
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_c4929aee716db88a2d9593b90356b8c5.webp 400w,
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_b1a0a374fb5ee1964a4c24c226425891.webp 760w,
+               /project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/distributed_rl/OnPolicy_distributed_hu22ca227f91a5f81a43214628e8edf8bf_60134_c4929aee716db88a2d9593b90356b8c5.webp"
+               width="760"
+               height="475"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Average reward for Distributed SARSA
+    </figcaption></figure>
+</p>
+<ul>
+<li>Average Reward during the learning episodes for Min-Max Q-Learning</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-average-reward-for-min-max-q-learning">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Average reward for Min-Max Q-Learning " srcset="
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_357a6bef9b5b3a90e5df03442d12746b.webp 400w,
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_f256cb4e7b9861dfdd8998ee3d4e81be.webp 760w,
+               /project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/distributed_rl/MIn-Max_hu67d1c7dc0a09bd4f4ae08c61fa116ad1_49906_357a6bef9b5b3a90e5df03442d12746b.webp"
+               width="760"
+               height="455"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Average reward for Min-Max Q-Learning
+    </figcaption></figure>
+</p>
+<ul>
+<li>Average Reward during the learning episodes for Belief Based Algorithms</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-average-reward-for-belief-based-algorithms">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Average reward for Belief Based Algorithms " srcset="
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_f637ef1192b6db32b5972f9f455c0b19.webp 400w,
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_13933cd65bd9262e3b062b97e8a10e81.webp 760w,
+               /project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/project/distributed_rl/Belief-Based_hu185505e99023e00eafa1bd7befeb9fe7_42138_f637ef1192b6db32b5972f9f455c0b19.webp"
+               width="760"
+               height="465"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Average reward for Belief Based Algorithms
+    </figcaption></figure>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/reinforcement-learning/">Reinforcement Learning</a>
+  
+  <a class="badge badge-light" href="/tag/past/">past</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://amirhosein-mesbah.github.io/project/distributed_rl/&amp;text=Multi%e2%80%91Agent%20Distributed%20Reinforcement%20Learning%20for%20grid%20Environment" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://amirhosein-mesbah.github.io/project/distributed_rl/&amp;t=Multi%e2%80%91Agent%20Distributed%20Reinforcement%20Learning%20for%20grid%20Environment" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Multi%e2%80%91Agent%20Distributed%20Reinforcement%20Learning%20for%20grid%20Environment&amp;body=https://amirhosein-mesbah.github.io/project/distributed_rl/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://amirhosein-mesbah.github.io/project/distributed_rl/&amp;title=Multi%e2%80%91Agent%20Distributed%20Reinforcement%20Learning%20for%20grid%20Environment" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Multi%e2%80%91Agent%20Distributed%20Reinforcement%20Learning%20for%20grid%20Environment%20https://amirhosein-mesbah.github.io/project/distributed_rl/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://amirhosein-mesbah.github.io/project/distributed_rl/&amp;title=Multi%e2%80%91Agent%20Distributed%20Reinforcement%20Learning%20for%20grid%20Environment" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/amir-mesbah/avatar_hub076f4e6af2a5fa118eb303586cb4805_113001_270x270_fill_q75_lanczos_center.jpg" alt="Amir Mesbah">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Amir Mesbah</h5>
+      <h6 class="card-subtitle">Master student in Artificial Intelligence and Robotics</h6>
+      <p class="card-text">My research interests include Machine Learning and Neuroscience.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/amirh_mesbah" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/amirhosein-mesbah" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/amirhossein-mesbah/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/uploads/resume.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me.
+  </p>
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.5f2242f9e416ca8987b1818a173b5651.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
