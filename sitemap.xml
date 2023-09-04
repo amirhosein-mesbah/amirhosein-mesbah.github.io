@@ -58,13 +58,7 @@
   <url>
     <loc>https://amirhosein-mesbah.github.io/slides/example/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/publication-type/1/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://amirhosein-mesbah.github.io/publication/example/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://amirhosein-mesbah.github.io/publication_types/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://amirhosein-mesbah.github.io/publication/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://amirhosein-mesbah.github.io/publication-type/1/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://amirhosein-mesbah.github.io/project/continuous_time/</loc><changefreq>weekly</changefreq></url>
   <url>
@@ -100,8 +94,16 @@
   <url>
     <loc>https://amirhosein-mesbah.github.io/tag/neuroscience/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://amirhosein-mesbah.github.io/publication_types/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/publication/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/tag/reinforcementlearning/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://amirhosein-mesbah.github.io/project/relation_extraction/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://amirhosein-mesbah.github.io/project/semantic_segmentation/</loc><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://amirhosein-mesbah.github.io/project/spark/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://amirhosein-mesbah.github.io/project/spark/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://amirhosein-mesbah.github.io/publication/socialrl/</loc><changefreq>weekly</changefreq></url></urlset>

@@ -693,25 +693,6 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>An example conference paper</title>
-      <link>https://amirhosein-mesbah.github.io/publication/example/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://amirhosein-mesbah.github.io/publication/example/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>https://amirhosein-mesbah.github.io/admin/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2410,6 +2391,25 @@ I&amp;rsquo;ve used Pytorch framework for this implementation.&lt;/p&gt;
 &lt;h2 id=&#34;spark-for-nlp&#34;&gt;Spark for NLP&lt;/h2&gt;
 &lt;p&gt;For this task, I downloaded the &lt;code&gt;Les Misérables&lt;/code&gt; book and created a &lt;code&gt;spark dataframe&lt;/code&gt; with sentences from the book. After that, I created the &lt;code&gt;bigram&lt;/code&gt; and &lt;code&gt;trigram&lt;/code&gt; of the prepared data frame and compute the count of each bigram and trigram.
 for the last part, I implemented a logistic regression to see if there is any relationship between the length of words in bigram or trigram.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Who to Learn from: A Preference-based Method for Social Reinforcement Learning</title>
+      <link>https://amirhosein-mesbah.github.io/publication/socialrl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://amirhosein-mesbah.github.io/publication/socialrl/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
